@@ -247,7 +247,7 @@ console.log(arr); // 结果：["apple", "orange", "banana", "mango", "lemon"]
 
     1.参数separator：可选。字符串或正则表达式，从该参数指定的地方分割 string Object。
     2.参数limit：可选。该参数可指定返回的数组的最大长度。如果设置了该参数，返回的子串不会多于这个参数指定的数组。如果没有设置该参数，整个字符串都会被分割，不考虑它的长度。
-    3.返回值Array：一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 string Object 分割成子串创建的。返回的数组中的字串不包括 separator 自身。   
+    3.返回值Array：一个字符串数组。该数组是通过在 separator 指定的边界处将字符串 stringObject 分割成子串创建的。返回的数组中的字串不包括 separator 自身。   
 提示：如果把空字符串 ("") 用作 separator，那么 stringObject 中的每个字符之间都会被分割。
 
 > split() 方法不改变原始字符串。
@@ -348,3 +348,51 @@ str.replace(/world/gi,'yori'); // 返回值："Hello yori"
 ```
 说明：执行一个全局替换，当"world"被找到，它就被替换为"yori"。
 
+#### 19.有一个元素长度超过100000且类型都是Number的数组args，如何求其最大值的方法？
+
+答：
+
+**方法一**
+```javascript
+
+var arrs = [11111,2222,333,44444,5555,666666,7777];
+var max = arrs[0];
+if(arrs.length < 2){
+    max;
+}
+for(var i = 0,len = arrs.length; i < len; i++){
+    if(arrs[i] > max){
+        max = arrs[i];
+    }
+}
+// 返回值：666666
+```
+
+**方法二**
+```javascript
+var arrs = [11111,2222,333,44444,5555,666666,7777];
+Math.max.apply(null,arrs); // 返回值：666666
+```
+**补充如果是二维数组，先转为一维数组**
+```javascript
+var arrs = [11111,[2222,333],44444,5555,666666,7777];
+var _arrs = arrs.join(',').split(',');
+Math.max.apply(null,_arrs); // 返回值：666666
+```
+
+#### 20.JS中Array对象的join()方法有什么用？
+
+答：join() 方法用于把数组中的所有元素转换一个字符串。
+
+> 元素是通过指定的分隔符进行分隔的。
+
+`array.join(separator)`
+
+    1.参数separator：可选。指定要使用的分隔符。如果省略该参数，则使用逗号作为分隔符。
+    2.返回值String：返回一个字符串。该字符串是通过把 arrayObject 的每个元素转换为字符串，然后把这些字符串连接起来，在两个元素之间插入 separator 字符串而生成的。
+    
+例子：
+```javascript
+var arr =['appe', 'origin', 'banana', 'mango', 'lemon'];
+arr.join(','); // 返回值："appe,origin,banana,mango,lemon"
+```
