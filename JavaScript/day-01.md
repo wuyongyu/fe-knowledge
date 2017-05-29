@@ -107,6 +107,7 @@ console.log(arr_1); // 结果：['a','d','c']
 > 要记住的是在JavaScript中关键字大小写敏感的，因此class和Class是不同的，Class也当然不是JavaScript的保留字。
 
 #### 7. jQuery中click和HTML DOM事件对象中onclick的区别?
+
 答：其中click是方法，而onclick是事件，两者是不同的概念。
 
 1.click()方法的主要作用是触发调用click方法元素onclick事件，实际上是模拟了鼠标的点击动作。此外，如果在click括号内定义了其他可执行语句，则click方法会在执行完onclick事件之后执行括号内部的语句。
@@ -134,6 +135,7 @@ function change() {
 说明：弹出框的弹出顺序先是'hello'，然后是'world'。
 
 #### 8.JS中String对象的indexOf()方法有什么用？
+
 答：indexOf()方法可返回某个指定的字符串值在字符串中首次出现的位置。
 > 如果没有找到匹配的字符串则返回-1。
 
@@ -177,18 +179,17 @@ str.search(/we/i); // 返回值：13
 总的来说，一般情况下indexOf比search更省资源。
 
 #### 11.JS中的slice()方法有什么用？
-答：  
+
+答：slice()方法可提取字符串的某个部分，并以新的字符串返回被提取的部分。
+> slice()方法不会改变原始数组。
+
 1.在Array对象中
 
 `array.slice(start, end)`
     
     1.参数start：必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2指倒数第二个元素，以此类推。
-    2.参数end：可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。
+    2.参数end：可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。
     3.返回值Array：返回一个新的数组，包含从start到end（不包括该元素）的arrayObject中的元素。
-
-slice()方法可提取字符串的某个部分，并以新的字符串返回被提取的部分。
-
-> slice() 方法不会改变原始数组。
 
 例子：
 ```javascript
@@ -200,7 +201,7 @@ arr.slice(1,3); // 返回值： ["origin", "banana"]
 `string.slice(start,end)`
 
     1.参数start：必须。要抽取的片断的起始下标。第一个字符位置为 0。
-    2.参数end：可选。紧接着要抽取的片段的结尾的下标。若未指定此参数，则要提取的子串包括 start 到原字符串结尾的字符串。如果该参数是负数，那么它规定的是从字符串的尾部开始算起的位置。
+    2.参数end：可选。紧接着要抽取的片段的结尾的下标。若未指定此参数，则要提取的子串包括start到原字符串结尾的字符串。如果该参数是负数，那么它规定的是从字符串的尾部开始算起的位置。
     3.返回值String：提取的字符串。
 
 slice(start, end)方法可提取字符串的某个部分，并以新的字符串返回被提取的部分。
@@ -218,6 +219,7 @@ str.slice(4,9); // 返回值："baidu"
 ```
 
 #### 12.JS中Array对象的splice()方法有什么用？
+
 答：splice()方法用于插入、删除或替换数组的元素。
 
 `arr.splice(index, howmany, item1,…, itemX)`
@@ -237,7 +239,8 @@ console.log(arr); // 结果：["apple", "orange", "banana", "mango", "lemon"]
 ```
 说明：移除数组的第三个元素，并在数组第三个位置添加新元素
 
-#### 13.JS中Array对象的split()方法有什么用？
+#### 13.JS中String对象的split()方法有什么用？
+
 答：split()方法用于把一个字符串分割成字符串数组。
 
 `string.split(separator,limit)`
@@ -256,10 +259,92 @@ str.split(" ",2); // 返回值：["Hello", "world"]
 ```
 说明：使用limit参数，将输出2个数组的值。
 
-#### 14.JS中的Array对象中的slice、splice、split的区别？
+#### 14.JS中的Array对象中的slice、splice、和String对象的split的区别？
+
 答：slice()方法可提取字符串的某个部分，并以新的字符串返回被提取的部分（不改变原数组）。
 
 splice()方法用于插入、删除或替换数组的元素（改变原数组）。
 
-split()方法用于把一个字符串分割成字符串数组（不改变原数组）。
+split()方法用于把一个字符串分割成字符串数组（不改变原字符串）。
+
+#### 15.JS中String对象的substr()方法有什么用？
+
+答：substr()方法可在字符串中抽取从start下标开始的指定数目的字符。
+> substr()方法不会改变源字符串。
+
+提示：substr()的参数指定的是子串的开始位置和长度，因此它可以替代slice()和substring()来使用。
+
+在IE4中，参数start的值无效。在这个BUG中，start规定的是第0个字符的位置。在之后的版本中，此BUG已被修正。
+
+ECMAscript没有对该方法进行标准化，**因此反对使用它**。
+
+`string.substr(start,length)`
+
+    1.参数start：必需。要抽取的子串的起始下标。必须是数值。如果是负数，那么该参数声明从字符串的尾部开始算起的位置。也就是说，-1指字符串中最后一个字符，-2指倒数第二个字符，以此类推。
+    2.参数length：可选。子串中的字符数。必须是数值。如果省略了该参数，那么返回从stringObject的开始位置到结尾的字串。
+    3.返回值String：一个新的字符串，包含从stringObject的 start（包括start所指的字符）处开始的length个字符。如果没有指定length，那么返回的字符串包含从start到stringObject的结尾的字符。
+
+例子：
+```javascript
+var str = "Hello world"
+str.substr(6,5); // 返回值："world"
+```
+
+#### 16.JS中String对象的substring()方法有什么用？
+
+答：substring()方法用于提取字符串中介于两个指定下标之间的字符。
+  
+substring()方法返回的子串包括`开始`处的字符，但不包括`结束`处的字符。
+
+> 重要事项：与slice()和substr()方法不同的是，substring() 不接受负的参数。
+
+`string.substring(from, to)`
+    
+    1.参数from：必需。一个非负的整数，规定要提取的子串的第一个字符在stringObject中的位置。
+    2.参数to：可选。一个非负的整数，比要提取的子串的最后一个字符在stringObject中的位置多1。如果省略该参数，那么返回的子串会一直到字符串的结尾。
+    3.返回值String：一个新的字符串，包含从stringObject的 start（包括start所指的字符）处开始的length个字符。如果没有指定length，那么返回的字符串包含从start到stringObject的结尾的字符。  
+
+例子：
+```javascript
+var str = "Hello world"
+str.substring(6,11); // 返回值："world"    
+```
+#### 17.JS中String对象的slice()方法，substr()和substring()的区别
+
+答：首先，他们都接收两个参数，slice()方法和substring()方法接收的是起始位置和结束位置(不包括结束位置)，而substr()方法接收的则是起始位置和所要返回的字符串长度。
+
+然后，当接收的参数是负数时，slice()方法的start如果为负数，会从尾部算起，-1表示倒数第一个，-2表示倒数第2个，此时end必须为负数，并且是大于start的负数，否则返回空字符串；substr()方法的end参数表示要截取的长度,若该参数为负数或0，都将返回空字符串；substring()则干脆将负参数都直接转换为0。
+
+> 注意：IE对substr()方法接收负值的处理有错，它会返回原始字符串。
+
+例子：
+```javascript
+var str = "Hello world";
+str.slice(-5); // 返回值："world"
+str.substr(-5); // 返回值："world"
+str.substring(-5); // 返回值："Hello world"
+
+str.slice(0,-6); // 返回值："Hello"
+str.substr(0,-6); // 返回值：""
+str.substring(5,-6); // 返回值："Hello"
+```
+
+#### 18.JS中String对象的replace()方法有什么用？
+
+答：replace()方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。
+
+> 该方法不会改变原始字符串。
+
+`string.replace(searchvalue,newvalue)`
+
+    1.参数searchvalue：必须。规定子字符串或要替换的模式的RegExp对象。
+    2.参数newvalue：必需。一个字符串值。规定了替换文本或生成替换文本的函数。
+    3.返回值String：一个新的字符串，是用replacement替换了regexp的第一次匹配或所有匹配之后得到的。
+    
+例子：
+```javascript
+var str = "Hello world";
+str.replace(/world/gi,'yori'); // 返回值："Hello yori"
+```
+说明：执行一个全局替换，当"world"被找到，它就被替换为"yori"。
 
