@@ -110,3 +110,13 @@
 答：`<sub>`标签是定义下标文本，例子：这段文本包括<sub>下标subscript<sub>
 
 `<sup>`标签是定义上标文本，例子：这段文本包括<sup>上标superscript<sup>
+
+#### 6.常见的块级元素、内联元素、内联块级元素有哪些？
+
+答：
+
+块级元素有：`<div>`、`<h1>...<h6>`、`<ul>`、`<dl>`、`<table>`、`<form>`、`<address>`、`<blackquote>`
+
+内联元素有：`<span>`、`<a>`、`<br>`、`<em>`、`<strong>`、`<var>`、`<cite>`、`<code>`
+
+内联块级元素有：`<img>`、`<input>`
