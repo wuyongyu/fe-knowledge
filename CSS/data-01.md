@@ -162,3 +162,22 @@ CSS3中有这样一个属性：box-sizing属性允许以特定的方式定义匹
 
 > 总的来说，margin用来隔开元素与元素之间的距离，padding用来隔开元素与内容之间的距离。
 
+#### 12.CSS中可以继承和不可以继承的有哪些？
+
+答：
+
+可以继承：
+
+
+1.所有元素可以继承：`cursor`、`visibility`
+
+2.内联元素可以继承：`color`、`line-height`、`font`、【`font-style`、`font-variant`、`font-family`、`font-size`、`font-width`】、【`text-decoration`、`text-transform`】、【`letter-spacing`、`word-spacing`、`white-space`】
+
+3.列表元素可以继承：`list-style`、【`list-style-type`、`list-style-position`、`list-style-image`】
+
+4.表格元素可以继承：`border-collapse`
+
+不可以继承：
+
+`width`、【`min-width`、`max-width`】、`height`、【`min-height`、`max-height`】、`display`、`margin`、`border`、`padding`、`background`、`position`、【`top`、`right`、`left`、`bottom`】、`float`、`clear`、`z-index`、`overflow`、`vertical-align`、`table-layout`
+
