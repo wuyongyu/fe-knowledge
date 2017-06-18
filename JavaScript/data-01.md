@@ -91,7 +91,7 @@ console.log(arr_1); // 结果：['a','d','c']
   
 #### 6.JS的标志符(名字)是什么，有哪些？保留字(关键字)是什么，有哪些？
 
-答：标识符就是给变量、函数和对象等指定的名字。构成标识符的字母是有一定的规范，JavaScript语言中标识符的命名规则是区分大小写，Myname与myname是两个不同的标识符。
+答：标识符就是给变量、函数和对象等指定的`名字`。构成标识符的字母是有一定的规范，JavaScript语言中标识符的命名规则是区分大小写，Myname与myname是两个不同的标识符。
 
 例子：  
 `identifier`，`userName`，`User_Name`，`_sys_val`，`$change`等为合法的标识符，而`2mail`，`room#`，`class`为非法的标识符。
@@ -102,7 +102,7 @@ console.log(arr_1); // 结果：['a','d','c']
 `break`、`delete`、`function`、`return`、`typeof`、`case`、`do`、`if`、`switch`、`var`、`catch`、`else`、`in`、`this`、`void`、`continue`、`false`、`instanceof`、`throw`、`while`、`debugger`、`finally`、`new`、`true`、`const`、`with`、`default`、`for`、`null`和`try`。
 > 未来JavaScript版本使用的
 
-`class`、`enum`、`export`、`extends`、`import`和`super`。
+`class`、`const`、`enum`、`export`、`extends`、`import`和`super`。
 
 > 要记住的是在JavaScript中关键字大小写敏感的，因此class和Class是不同的，Class也当然不是JavaScript的保留字。
 
