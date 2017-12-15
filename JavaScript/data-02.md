@@ -235,7 +235,7 @@ var reg = /^1[0-9]{10}$/;
 答：
 
 1、第一种方式(`较差`)：
-    
+
 ```javascript
 var el = document.getElementById('mydiv');
 el.style.borderLeft = '1px';
@@ -246,18 +246,20 @@ el.style.padding = '1px';
 2、第二种方式(`较好`)：
 
 ```javascript
-    var el = document.getElementById('mydiv');
-    el.style.cssText = 'border-left: 1px; border-right: 2px; padding: 1px;';
+var el = document.getElementById('mydiv');
+el.style.cssText = 'border-left: 1px; border-right: 2px; padding: 1px;';
 ```
 3、第三种方式(`更好`)：
+
 ```javascript 
-    var el = document.getElementById('mydiv');
-    el.className = 'active'
-```    
+var el = document.getElementById('mydiv');
+el.className = 'active';
+```
+
 > 虽然大部分浏览器对此进行优化，只触发一次重拍，但在旧版本的浏览器仍然效率低下。 第二种方式还可以在`cssText`后面加上字符串，例如：
 ```javascript
-    var el = document.getElementById('mydiv');
-    el.style.cssText = 'border-left: 1px; border-right: 2px; padding: 1px;';
-    el.style.cssText += '; border-left: 2px;'
+var el = document.getElementById('mydiv');
+el.style.cssText = 'border-left: 1px; border-right: 2px; padding: 1px;';
+el.style.cssText += '; border-left: 2px;'
 ````
 > 第三种方式是修改CSS的class名称，而不是修改内联样式，更清晰、更易于维护，虽然可能带来轻微的性能影响，因为改变类时需要检查级联样式。
