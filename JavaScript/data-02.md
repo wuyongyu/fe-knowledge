@@ -263,3 +263,89 @@ el.style.cssText = 'border-left: 1px; border-right: 2px; padding: 1px;';
 el.style.cssText += '; border-left: 2px;'
 ````
 > 第三种方式是修改CSS的class名称，而不是修改内联样式，更清晰、更易于维护，虽然可能带来轻微的性能影响，因为改变类时需要检查级联样式。
+
+#### 9、如果以0毫秒的超时时间调用setTimeout()，会发生什么？
+
+答：1、首先setTimeout()可以用来注册指定的时间之后单次或者重复调用的函数。它是客户端的全局函数，所以被定义为window对象的方法，但作为通用函数，其实它不会对窗口做什么事情。
+
+    例子：setTimeout(f, 0);
+
+2、如果以0毫秒的超时时间调用setTimeout()，那么指定的函数f不会立刻执行。相反，会把它放到队列中，等前面处于等待状态的事件处理程序全部执行完成后，再"`立即`"调用它
+
+#### 10、如何提取URL的搜索字符串中的参数？
+
+答：1、Location对象的search属性，(search属性)它返回的是问号之后的URL，这部分通常是某种类型的查询字符串。
+
+2、使用一个通用函数urlArgs()进行封装，代码如下：
+
+    /*
+     * 这个函数用来解析来自URL的查询字符串中name=value参数对
+     * 它将name=value对存储在一个对象的属性中，并返回该对象
+     * 
+     * let args = urlArgs();    // 从URL中解析参数
+     * args.name = args.name || "";     // 如果参数中定义了的话就使用参数，否则使用一个默认值
+     * args.number = parseInt(args.number) || 10;
+     */
+
+
+```javascript
+function urlArgs(){
+    let args = {};  // 定义一个空对象
+    let query = location.search.substring(1);   // 查找到查询串，并去掉"？"
+    console.log("query:" + query);
+    let paris = query.split("&");   // 根据"&"符号查询字符串分隔开
+    console.log("paris:" + paris);
+    for(let i = 0, len = paris.length; i < len; i++){   // 对于每个片段
+        let pos = paris[i].indexOf("=");    // 查找"name=value"
+        if(pos === -1){     // 如果没有找到的话，就跳过
+            continue;
+        }
+        let name = paris[i].substring(0, pos);  // 提取name
+        console.log("name:" + name);
+        let value = paris[i].substring(pos+1);  // 提取value
+        console.log("value:" + value);
+        value = decodeURIComponent(value);  // 对value进行解码
+        args[name] = value;     // 存储为属性
+        console.dir(args);
+    }
+    return args;    // 返回解析后的参数
+}
+
+let args = urlArgs();
+```    
+
+#### 11、说一说你对addEventListener()的理解？
+
+答：1、首先`Window`对象、`Document`对象和所有文档元素--都定义了一个名叫`addEventListener()`的方法，使用这个方法可以为`事件目标`**注册**`事件处理程序`。
+
+2、addEventListener接受三个参数。
+
+    第一个参数：是要注册处理程序的事件类型。
+    【注意事项：
+        1.这个事件类型(或者名字)是字符串。
+        2.它不应该包括用于设置事件处理程序属性的前缀"on"】
+    
+    第二个参数：是当指定类型的事件发生时应该调用的函数。
+    
+    第三个参数：是布尔值。
+    【注意事项：
+        1.通常情况下的默认值是false。
+        2.如果传递了true，那么函数将注册为捕获事件处理程序，
+        并在事件不同的调度阶段调用。
+        3.忽略第三个参数会在某些浏览器中出错。
+    】
+    
+3、相对addEventListener()的是removeEventListener()方法，它同样有三个参数，`从对象中删除事件处理程序函数而非添加`，它常用于临时注册事件处理程序，然后不久就删除它
+
+4、例子如下：
+```javascript
+
+function handler() {
+    console.log("hello world");
+}
+
+document.addEventListener('click', handler, false);
+
+document.removeEventListener('click', handler, false);
+```
+
