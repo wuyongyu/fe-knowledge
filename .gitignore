@@ -1,0 +1,5 @@
+# IDE Config
+.idea
+
+# ignore log
+*.log
