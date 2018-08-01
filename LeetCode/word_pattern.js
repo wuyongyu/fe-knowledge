@@ -48,13 +48,13 @@ var wordPattern = function(pattern, str) {
 
     if(!patternMap[p]){
       patternMap[p] = s;
-    } else if(patternMap[p] != s){
+    } else if(patternMap[p] !== s){
       return false;
     }
 
     if(!strMap[s]){
       strMap[s] = p;
-    } else if(strMap[s] != p){
+    } else if(strMap[s] !== p){
       return false;
     }
   }

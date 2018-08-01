@@ -8,6 +8,5 @@
  * @return {string}
  */
 var reverseString = function(s) {
-  var result = s.split("").reverse().join("");
-  return result;
+  return s.split("").reverse().join("");
 };
