@@ -1,7 +1,6 @@
 React知识拓展
 ===
 
-####8. React
 - [react.js 中文论坛](http://www.react-china.org/)
 - [react.js 官方网址](https://facebook.github.io/react/index.html)
 - [react.js 官方文档](https://facebook.github.io/react/docs/getting-started.html)
