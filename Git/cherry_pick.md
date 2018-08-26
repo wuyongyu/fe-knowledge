@@ -1,4 +1,6 @@
-### cherry-pick
+cherry-pick
+===
+
   - git cherry-pick <提交号>...
   - git cherry C2 C4[复制commit到自己的分支]
   

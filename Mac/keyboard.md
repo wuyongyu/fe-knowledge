@@ -1,4 +1,5 @@
-### 快捷键
+快捷键
+===
 
  - Ctrl + Shift + Power // 屏保快捷键
  - Ctrl + Command + Q   // 锁屏快捷键 

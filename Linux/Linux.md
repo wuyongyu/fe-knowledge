@@ -1,4 +1,5 @@
-## Linux简介
+Linux简介
+===
 
 ### Linux发展史
   - 之前有个 `Minix`
