@@ -24,18 +24,18 @@
  */
 
 var findMedianSortedArrays = function(nums1, nums2){
-    var m = nums1.length;
-    var n = nums2.length;
-    var total = m + n;
+    let m = nums1.length;
+    let n = nums2.length;
+    let total = m + n;
     // 无符号移位运算符
-    var half = total >>> 1;
-
+    let half = total >>> 1;
+    // 判断奇偶数
     if(total & 1){
         return findKth(nums1, m, nums2, n, half + 1);
     } else {
         return (findKth(nums1, m, nums2, n, half) + findKth(nums1, m, nums2, n, half + 1)) / 2;
     }
-}
+};
 
 function findKth(nums1, m, nums2, n, half) {
     if(m > n){
@@ -48,7 +48,7 @@ function findKth(nums1, m, nums2, n, half) {
         return Math.min(nums1[0], nums2[0]);
     }
 
-    var partNums1 = Math.min(half >>> 1, m), partNums2 = half - partNums1;
+    let partNums1 = Math.min(half >>> 1, m), partNums2 = half - partNums1;
 
     if(nums1[partNums1 - 1] < nums2[partNums2 - 1]){
         return findKth(nums1.slice(partNums1), m - partNums1, nums2, n, half - partNums1)
