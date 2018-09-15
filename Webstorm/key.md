@@ -20,3 +20,9 @@ fn——功能键就是fn
   - Control + ~  // 替换主题
   
   - alt + /  // 代码补全
+  
+  command + L  // 查找某行
+  
+  shift + shift  // 查找文件
+  
+  command + shift + f  // 查找内容ß
