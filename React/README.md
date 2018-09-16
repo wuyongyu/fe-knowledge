@@ -12,3 +12,5 @@ React知识拓展
 - [Webpack 和 React 小书 - 前端乱炖](http://www.html-js.com/article/Fakefish%203053)
 - [Webpack 和 React 小书 - gitbook](https://fakefish.github.io/react-webpack-cookbook/)
 - [React原创实战视频教程](http://www.piliyu.com/)
+
+> React Fiber 指的是16版本以后的React
