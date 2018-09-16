@@ -14,3 +14,7 @@ React知识拓展
 - [React原创实战视频教程](http://www.piliyu.com/)
 
 > React Fiber 指的是16版本以后的React
+
+- 依赖`nodejs` 
+    - LTS版本，长时间支持的版本
+    - Current版本，最新的版本
