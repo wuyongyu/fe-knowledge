@@ -14,3 +14,19 @@
     1. 希望一个变量长期驻扎在内存中
     2. 避免全局变量的污染
     3. 私有成员的存在
+    
+  - 例子：
+  
+  ```javascript
+   const f = (a) => (b) =>{
+      console.log(a, b)
+  }
+  
+  // 等价于
+  
+  function f(a) {
+      return function(b){
+          console.log(a, b)
+      }
+  }
+  ```
