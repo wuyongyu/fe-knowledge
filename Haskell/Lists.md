@@ -73,3 +73,7 @@
 `[x | x <- "outrageous", not (elem x "aeiou")]`
 
 > [x | x <- "outrageous", not (x \`elem\` "aeiou")]
+
+> [[x | x <- word, not(x \`elem\` "aeiou")] | word <- ["bell", "book", "candle"]]
+
+`[[x * y | y <- [1..5]] | x <- [1..5]]`
