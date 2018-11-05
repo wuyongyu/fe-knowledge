@@ -12,8 +12,10 @@
   
 > 不小心按到  command + F1 可以切换为投屏和分屏  -- 酷炫
 
- - command + option + " `+` " 可以进行屏幕放大和缩小 【等价于 control + "`鼠标滚轮`"】
+ - Command + option + " `+` " 可以进行屏幕放大和缩小 【等价于 Control + "`鼠标滚轮`"】
  
- - command + shift + 4 可以截取屏幕部分内容
+ - Command + shift + 4 可以截取屏幕部分内容
 
- - control + 数字键 可以屏幕切换
+ - Control + 数字键 可以屏幕切换
+ 
+ - Command+Shift+. 可以显示隐藏文件、文件夹，再按一次，恢复隐藏
