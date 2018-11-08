@@ -21,8 +21,10 @@ fn——功能键就是fn
   
   - alt + /  // 代码补全
   
-  - command + L  // 查找某行
+  - Command + L  // 查找某行
   
-  - shift + shift  // 查找文件
+  - Shift + Shift  // 查找文件
   
-  - command + shift + f  // 查找内容ß
+  - Command + Shift + f  // 查找内容
+  
+  - Command + Shift + Delete // 光标上一个位置

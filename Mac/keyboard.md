@@ -14,8 +14,10 @@
 
  - Command + option + " `+` " 可以进行屏幕放大和缩小 【等价于 Control + "`鼠标滚轮`"】
  
- - Command + shift + 4 可以截取屏幕部分内容
+ - Command + Shift + 4 可以截取屏幕部分内容
 
  - Control + 数字键 可以屏幕切换
  
- - Command+Shift+. 可以显示隐藏文件、文件夹，再按一次，恢复隐藏
+ - Command + Shift + . 可以显示隐藏文件、文件夹，再按一次，恢复隐藏
+ 
+ - Command + option + ESC 打开强制退出应用程序
