@@ -55,6 +55,13 @@ var app = app || {};
     });
     this.inform();
   };
+  app.TodoModel.prototype.save = function (todoToSave, text) {
+    this.todos = this.todos.map(function (todo) {
+      return todo !== todoToSave ? todo : Utils.extend({}, todo, {title: text});
+    });
+
+    this.inform();
+  };
   app.TodoModel.prototype.clearCompleted = function () {
     this.todos = this.todos.filter(function (todo) {
       return !todo.completed;

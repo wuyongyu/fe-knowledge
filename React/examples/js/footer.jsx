@@ -29,11 +29,13 @@ var app = app || {};
                 All
               </a>
             </li>
-            {''}
+            {' '}
             <li>
-              <a href="#/active" className={classNames({selected: nowShowing === app.ACTIVE_TODOS})}>Active</a>
+              <a href="#/active" className={classNames({selected: nowShowing === app.ACTIVE_TODOS})}>
+                Active
+              </a>
             </li>
-            {''}
+            {' '}
             <li>
               <a href="#/completed" className={classNames({selected: nowShowing === app.COMPLETED_TODOS})}>
                 Completed
@@ -45,4 +47,4 @@ var app = app || {};
       )
     }
   })
-})()
+})();

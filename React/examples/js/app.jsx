@@ -1,7 +1,6 @@
 var app = app || {};
 
 (function () {
-  'use strict';
 
   app.ALL_TODOS = 'all';
   app.ACTIVE_TODOS = 'active';
@@ -31,7 +30,7 @@ var app = app || {};
         '/active': setState.bind(this, {
           nowShowing: app.ACTIVE_TODOS
         }),
-        'completed': setState.bind(this, {
+        '/completed': setState.bind(this, {
           nowShowing: app.COMPLETED_TODOS
         })
       });
@@ -64,6 +63,10 @@ var app = app || {};
     toggleAll: function (event) {
       var checked = event.target.checked;
       this.props.model.toggleAll(checked);
+    },
+
+    toggle: function (todoToggle) {
+      this.props.model.toggle(todoToggle);
     },
 
     destroy: function (todo) {
@@ -149,7 +152,7 @@ var app = app || {};
               onChange={this.toggleAll}
               checked={activeTodoCount === 0}
             />
-            <label htmlFor={toggle-all} />
+            <label htmlFor="toggle-all" />
             <ul className="todo-list">
               {todoItems}
             </ul>

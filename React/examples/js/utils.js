@@ -35,7 +35,7 @@ var app = app || {};
       var newObj = {};
       for(var i = 0; i < arguments.length; i++){
         var obj = arguments[i];
-        for(key in obj){
+        for(var key in obj){
           if(obj.hasOwnProperty(ket)){
             newObj[key] = obj[key];
           }
