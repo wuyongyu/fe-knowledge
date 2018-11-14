@@ -1,4 +1,4 @@
-快捷键
+[快捷键](https://support.apple.com/zh-cn/HT201236)
 ===
 
  - Ctrl + Shift + Power // 屏保快捷键
@@ -21,3 +21,5 @@
  - Command + Shift + . 可以显示隐藏文件、文件夹，再按一次，恢复隐藏
  
  - Command + option + ESC 打开强制退出应用程序
+ 
+ - Control–Command–电源按钮 重新启动
