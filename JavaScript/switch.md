@@ -5,9 +5,17 @@ switch
 
 - switch的语法
 
-```hash
+```markdown
 switch(expression){
-    statements
+    case value: statement
+        break;
+    case value: statement
+        break;
+    case value: statement
+        break;
+    case value: statement
+        break;
+    default: statement
 }
 ```
 
@@ -30,5 +38,40 @@ switch(n){
         
 }
 ```
+
+---
+
+```javascript
+if(i === 25){
+  console.log("25");
+} else if(i === 35){
+  console.log("35");
+} else if(i === 45){
+  console.log("45");
+} else {
+  console.log("Other");
+}
+````
+
+> 等价于
+
+```javascript
+switch (i){
+  case 25:
+    console.log("25");
+    break;
+  case 35:
+    console.log("35");
+    break;
+  case 45:
+    console.log("45");
+    break;
+  default:
+    console.log("Other");
+}
+```
+
+
+
 
 > 避免使用带有副作用的`case`表达式，比如函数调用表达式和赋值表达式。 最安全的做法是在`case`表达式中使用**常量表达式**
