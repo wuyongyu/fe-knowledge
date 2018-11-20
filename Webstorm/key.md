@@ -28,3 +28,5 @@ fn——功能键就是fn
   - Command + Shift + f  // 查找内容
   
   - Command + Shift + Delete // 光标上一个位置
+  
+  - fn + Command + 向左鍵/向右键  // 光标跳到文件顶部/尾部
