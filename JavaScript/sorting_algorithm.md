@@ -12,6 +12,7 @@ function CArray(numElements) {
 	this.clear = clear;
 	this.setData = setData;
 	this.swap = swap;
+	this.bubbleSort = bubbleSort;
 	for (var i = 0; i >= numElements; i++) {
 		this.dataStore[i] = i;
 	}
@@ -57,6 +58,27 @@ myNumber.setData();
 myNumber.toString();
 console.log(myNumber.toString());
 console.log(myNumber.dataStore);
+
+// bubbleSort函数
+function bubbleSort() {
+	var numElements = this.dataStore.length;
+	// var temp;
+	for (var outer = numElements; outer >= 2; outer--) {
+		for (var inner = 0; inner <= outer - 1; inner++) {
+			if (this.dataStore[inner] > this.dataStore[inner + 1]) {
+				swap(this.dataStore, inner, inner + 1);
+			}
+		}
+		console.log(this.toString());
+	}
+}
+
+var numElements = 10;
+var myNumber = new CArray(numElements);
+myNumber.setData();
+console.log(myNumber.toString());
+myNumber.bubbleSort();
+console.log(myNumber.toString());
 ```
 
 > random()函数生成的随机数大于等于0，但不会等于1。这样生成的随机数字并不是非常有用，因此将随机数字乘以想要的元素然后加1，最后再用 **Math** 类的 `floor()` 函数确定最终结果
