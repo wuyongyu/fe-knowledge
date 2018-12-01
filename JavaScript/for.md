@@ -3,8 +3,8 @@ for
 
 - for语句的语法
 
-```javascript
-for(initialize; test; increment)
+```markdown
+for(initialize; expression; increment)
     statement
 ```
 
@@ -12,8 +12,13 @@ for(initialize; test; increment)
 
 ```javascript
 initialize;
-while(test){
+while(expression){
     statement;
     increment
 }
 ```
+
+for-in语句
+===
+
+`for(property in expression) statement`
