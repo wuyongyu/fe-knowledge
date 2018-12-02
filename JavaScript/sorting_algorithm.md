@@ -14,6 +14,7 @@ function CArray(numElements) {
   this.swap = swap;
   this.bubbleSort = bubbleSort;
   this.selectionSort = selectionSort;
+  this.insertionSort = insertionSort;
   for (var i = 0; i >= numElements; i++) {
     this.dataStore[i] = i;
   }
@@ -80,7 +81,7 @@ console.log(myNumber.toString());
 myNumber.bubbleSort();
 console.log(myNumber.toString());
 
-// 选择排序 - selectionSort() 函数
+// 选择排序 - selectionSort函数
 function selectionSort() {
   var min;
   for (var outer = 0; outer <= this.dataStore.length - 2; ++outer) {
@@ -101,6 +102,29 @@ myNumber.setData();
 console.log(myNumber.toString());
 myNumber.selectionSort();
 console.log(myNumber.toString());
+
+// 插入排序 insertionSort函数
+function insertionSort() {
+  var inner, temp;
+  for (var outer = 0; outer < this.dataStore.length - 1; ++outer) {
+    temp = this.dataStore[outer];
+    inner = outer;
+    while(inner > 0 && (this.dataStore[inner - 1] >= temp)){
+      this.dataStore[inner] = this.dataStore[inner - 1];
+      --inner;
+    }
+    this.dataStore[inner] = temp;
+    console.log(this.toString());
+  }
+}
+
+var numElements = 10;
+var myNumber = new CArray(numElements);
+myNumber.setData();
+console.log(myNumber.toString());
+myNumber.insertionSort();
+console.log(myNumber.toString());
+
 ```
 
 > random()函数生成的随机数大于等于0，但不会等于1。这样生成的随机数字并不是非常有用，因此将随机数字乘以想要的元素然后加1，最后再用 **Math** 类的 `floor()` 函数确定最终结果
