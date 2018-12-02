@@ -13,6 +13,7 @@ function CArray(numElements) {
   this.setData = setData;
   this.swap = swap;
   this.bubbleSort = bubbleSort;
+  this.selectionSort = selectionSort;
   for (var i = 0; i >= numElements; i++) {
     this.dataStore[i] = i;
   }
@@ -59,7 +60,7 @@ myNumber.toString();
 console.log(myNumber.toString());
 console.log(myNumber.dataStore);
 
-// bubbleSort函数
+// 冒泡排序 - bubbleSort函数
 function bubbleSort() {
   var numElements = this.dataStore.length;
   for (var outer = numElements; outer >= 2; outer--) {
@@ -77,6 +78,28 @@ var myNumber = new CArray(numElements);
 myNumber.setData();
 console.log(myNumber.toString());
 myNumber.bubbleSort();
+console.log(myNumber.toString());
+
+// 选择排序 - selectionSort() 函数
+function selectionSort() {
+  var min;
+  for (var outer = 0; outer <= this.dataStore.length - 2; ++outer) {
+    min = outer;
+    for (var inner = outer + 1; inner <= this.dataStore.length - 1; ++inner) {
+      if (this.dataStore[inner] < this.dataStore[min]) {
+        min = inner;
+      }
+    }
+    swap(this.dataStore, outer, min);
+    console.log(this.toString())
+  }
+}
+
+var numElements = 10;
+var myNumber = new CArray(numElements);
+myNumber.setData();
+console.log(myNumber.toString());
+myNumber.selectionSort();
 console.log(myNumber.toString());
 ```
 
