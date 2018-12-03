@@ -61,7 +61,7 @@ myNumber.toString();
 console.log(myNumber.toString());
 console.log(myNumber.dataStore);
 
-// 冒泡排序 - bubbleSort函数
+// 冒泡排序 - bubbleSort函数 【两两比较，最小越靠前】
 function bubbleSort() {
   var numElements = this.dataStore.length;
   for (var outer = numElements; outer >= 2; outer--) {
@@ -81,7 +81,7 @@ console.log(myNumber.toString());
 myNumber.bubbleSort();
 console.log(myNumber.toString());
 
-// 选择排序 - selectionSort函数
+// 选择排序 - selectionSort函数 【两两对比，最小才替换】
 function selectionSort() {
   var min;
   for (var outer = 0; outer <= this.dataStore.length - 2; ++outer) {
@@ -103,10 +103,10 @@ console.log(myNumber.toString());
 myNumber.selectionSort();
 console.log(myNumber.toString());
 
-// 插入排序 insertionSort函数
+// 插入排序 insertionSort函数 【递增对比，最小插最前】
 function insertionSort() {
   var inner, temp;
-  for (var outer = 0; outer < this.dataStore.length - 1; ++outer) {
+  for (var outer = 1; outer <= this.dataStore.length - 1; ++outer) {
     temp = this.dataStore[outer];
     inner = outer;
     while(inner > 0 && (this.dataStore[inner - 1] >= temp)){
