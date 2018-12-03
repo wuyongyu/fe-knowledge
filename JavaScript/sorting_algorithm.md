@@ -125,6 +125,41 @@ console.log(myNumber.toString());
 myNumber.insertionSort();
 console.log(myNumber.toString());
 
+// 获取系统时间
+var start = new Date().getTime();
+console.log(start);
+
+// for循环计时器
+var start = new Date().getTime();
+for(var i = 1; i < 1000; i++){
+	console.log(i);
+}
+var stop = new Date().getTime();
+var elapsed = stop - start;
+console.log("消耗时间为：" + elapsed + " 毫秒。");
+
+// 为排序函数计时
+var numElements = 1000;
+var myNumber = new CArray(numElements);
+myNumber.setData();
+var start = new Date().getTime();
+myNumber.bubbleSort();
+var stop = new Date().getTime();
+var elapsed = stop - start;
+console.log("对" + numElements + " 个元素执行冒泡排序消耗的时间为：" + elapsed + " 毫秒。");
+
+start = new Date().getTime();
+myNumber.selectionSort();
+stop = new Date().getTime();
+elapsed = stop - start;
+console.log("对" + numElements + " 个元素执行选择排序消耗的时间为：" + elapsed + " 毫秒。");
+
+start = new Date().getTime();
+myNumber.insertionSort();
+stop = new Date().getTime();
+elapsed = stop - start;
+console.log("对" + numElements + " 个元素执行插入排序消耗的时间为：" + elapsed + " 毫秒。");
+
 ```
 
 > random()函数生成的随机数大于等于0，但不会等于1。这样生成的随机数字并不是非常有用，因此将随机数字乘以想要的元素然后加1，最后再用 **Math** 类的 `floor()` 函数确定最终结果
