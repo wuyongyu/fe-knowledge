@@ -17,3 +17,13 @@ function sum(num1, num2){
 
 sum(1, 2);  // 3
 ```
+
+---
+
+```javascript
+function displayObject(o) {
+  // 如果参数是null或者undefined则立刻返回
+  if(!o) return;
+  //其他逻辑
+}
+```
