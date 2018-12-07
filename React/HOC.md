@@ -44,3 +44,37 @@
         "presets": ["react-native-stage-0/decorator-support"]
      }
      ```
+---
+
+高阶组件的应用
+
+- 代理方式的高阶组件
+
+  - 操纵`prop`
+  - 抽取状态
+  - 访问`ref`
+  - 包装组件
+  ```React
+  export default () => WrappedComponent => class A extends Component {
+    render(){
+      const { ...otherProps } = this.props;
+      return <WrappedComponent {...otherProps} />
+    }
+  }
+  ```
+> 返回的新组件类直接继承自 **React.Component** 类，新组件扮演的角色传入参数组件的一个代理，在新组件的 **render** 函数中，将被包裹组件渲染出来，除了高阶组件自己要做的工作，其余功能全部转手给了被包裹的组件
+
+- 继承方式的高阶组件
+  - 操纵prop
+  - 操纵生命周期函数
+  ```react
+  export default () => WrappedComponent => class A extends WrappedComponent {
+    render(){
+      const { user, ...otherProps } = this.props;
+      this.props = otherProps;
+      return super.render()
+    }
+  }
+  ```
+
+> 采用继承关联作为参数的组件和返回的组件，假如传入的组件参数是 **WrappedComponent**，那么返回的组件就直接继承自 **WrappedComponent**
