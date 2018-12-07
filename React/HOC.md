@@ -26,3 +26,21 @@
 
 `export default connect(mapStateToprops, mapDispatchToProps)(Header)`
 
+---
+
+使用高阶组件
+
+1. higherOrderComponent(WrappedComponent);
+
+2. @ higherOrderComponent
+   - 在 **create-react-app** 中使用装饰器
+     - `npm run eject`
+   - 安装相关插件
+     - `npm install babel-proset-stage-2 --save-dev`
+     - `npm install babel-proset-react-native-stage-0 --save-dev`
+   - 在根目录下创建 `.babelrc`
+     ```
+     {
+        "presets": ["react-native-stage-0/decorator-support"]
+     }
+     ```
