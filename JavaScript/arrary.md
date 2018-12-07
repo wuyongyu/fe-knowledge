@@ -396,3 +396,5 @@ Math.max.apply(null,_arrs); // 返回值：666666
 var arr =['appe', 'origin', 'banana', 'mango', 'lemon'];
 arr.join(','); // 返回值："appe,origin,banana,mango,lemon"
 ```
+
+> 数组直接量的语法允许有可选的结尾的逗号，故 `[,,]` 只有两个元素而非三个
