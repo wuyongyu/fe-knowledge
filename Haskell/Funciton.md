@@ -3,12 +3,12 @@
 
 > `ecmas program.hs`
 
-```
+```haskell
 hypotenuse a b = sqrt (a ^ 2 + b ^ 2)
 
 identifyCamel humps = if humps == 1
                         then "dromedary"
-                        else "Bactrian"
+                        else "yong"
 ```
 
 `:load program`
@@ -21,8 +21,7 @@ identifyCamel humps = if humps == 1
 
 `identifyCamel 2`
 
-let
-===
+> let
 
 `let double x = 2 * x`
 
