@@ -19,7 +19,7 @@ PHP知识拓展
   - [掌握电商后台设计](http://www.yixieshi.com/78740.html)
   - [电商系统设计之商品](https://segmentfault.com/a/1190000015887494)
   
-- laravel
-  - [laravel](https://laravel.com/)
+- Laravel
+  - [Laravel](https://laravel.com/)
   - [Laravel 电商实战](https://github.com/summerblue/laravel-shop)
   - [Laravel 教程 - 电商实战](https://laravel-china.org/courses/laravel-shop)

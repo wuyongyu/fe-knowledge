@@ -5,17 +5,18 @@
 
 - 【两个冒号就是对类中的方法的静态引用】
 - 例子：
+
 ```php
 class A
 {
     static $count = 0;
-    static function haha()
+    static function a()
     {
         // code
     }
     function f()
     {
-        self::haha();
+        self::a();
         self::$count;
     }
 }
