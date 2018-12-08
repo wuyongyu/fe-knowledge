@@ -1,4 +1,7 @@
-```js
+this
+===
+
+```javascript
 var fn = function(one, two){
     console.log(one, two)
 }
@@ -8,7 +11,7 @@ fn(g,b);
 // 结果：{},{}
 ```
 
-```js
+```javascript
 var fn = function(one, two){
     console.log(this, one, two)
 }
@@ -18,8 +21,7 @@ fn(g,b);
 // 结果：{}<global>,{},{}
 ```
 
-
-```js
+```javascript
 var fn = function(one, two){
     console.log(this, one, two)
 }

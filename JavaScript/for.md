@@ -18,15 +18,13 @@ while(expression){
 }
 ```
 
-for-in语句
-===
+- for-in语句
 
 `for(property in expression) statement`
 
 ---
 
-数组遍历
-===
+- 数组遍历
 
 ```javascript
 var o = {
@@ -52,5 +50,4 @@ for(var index in sparseArray){
   
   console.log("索引值：",index, "数组值：", sparseArray[index]);
 }
-
 ```

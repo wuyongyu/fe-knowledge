@@ -1,8 +1,12 @@
-```js
+webpack
+===
+
+```javascript
 // webpack.config.js 文件配置webpack
-// definePlugin 会把定义的string变量插入到js代码中
+// definePlugin 会把定义的 string 变量插入到js代码中
 ```
-```js
+
+```javascript
 var definePlugin = new webpack.DefinePlugin({
     __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || true)),
     __PRERELEASE__: JSON.stringify(JSON.parse(process.env.BUILD_PRERELEASE || 'false'))
@@ -43,28 +47,29 @@ module.exports = {
         ]
     },
     resolve: {
-        // 现在require文件的时候可以直接使用require('file')，不用使用require('file.coffee')
+        // 现在 require 文件的时候可以直接使用 require('file')，不用使用require('file.coffee')
         extensions: ['', 'js', 'json', 'coffee']
     }
 };
 ```
 
-```js
+```javascript
 // 多个入口文件，优化通用代码
 // webpack.config.js
 ````
+
 ```js
 var webpack = require('webpack');
 
 var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js'); // 引人插件
 module.exports = {
     entry: {
-        Profile: './profile.js', // 为profile和feed创建自己的入口文件
+        Profile: './profile.js', // 为 profile 和 feed 创建自己的入口文件
         Feed: '.feed.js'
     },
     output: {
         path: 'build',
-        file: '[name].js' // name是基于上边entry中定义的key
+        file: '[name].js' // name 是基于上边 entry 中定义的 key
     },
     plugins: [commonsPlugin]
 };
@@ -72,8 +77,14 @@ module.exports = {
 
 > webpack 开发环境下编译
 
+---
+
 > webpack --watch 开发环境下持续的监听文件的变动来进行编译（非常快）
 
+---
+
 > webpack -d 引入source maps
+
+---
 
 > webpack -p 产品编译和压缩 （会删除所有无作用的代码）

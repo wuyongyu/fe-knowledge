@@ -6,13 +6,12 @@
 - npm上的模块包例子
 
 ```javascript
-
 // 不好的写法
 var getServerStuff = function(callback) {
   return ajaxCall(function(json) {
     return callback(json);
   })
-} 
+}
 
 // 这才像样
 var getServerStuff = ajaxCall;
@@ -36,5 +35,4 @@ var getServerStuff = function(callback) {
 
 // ...就等价于
 var getServerStuff = ajaxCall;  // <-- 看，没有括号
-
 ```

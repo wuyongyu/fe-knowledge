@@ -2,6 +2,7 @@
 ===
 
 - 数组测试平台类
+
 ```javascript
 function CArray(numElements) {
   this.dataStore = [];
@@ -132,7 +133,7 @@ console.log(start);
 // for循环计时器
 var start = new Date().getTime();
 for(var i = 1; i < 1000; i++){
-	console.log(i);
+  console.log(i);
 }
 var stop = new Date().getTime();
 var elapsed = stop - start;

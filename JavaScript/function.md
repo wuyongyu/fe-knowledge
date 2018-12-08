@@ -22,7 +22,7 @@ sum(1, 2);  // 3
 
 ```javascript
 function displayObject(o) {
-  // 如果参数是null或者undefined则立刻返回
+  // 如果参数是`null`或者`undefined`则立刻返回
   if(!o) return;
   //其他逻辑
 }

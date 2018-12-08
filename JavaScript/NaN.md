@@ -3,7 +3,7 @@ NaN理解
 
 - 判断一个值是否是NaN，标准的库函数isNaN也不可靠
 
-比如： 
+比如：
 
 ```javascript
 isNaN(NaN); // true
