@@ -12,11 +12,11 @@ CSS 实现类似原生效果的 1px 边框
 ```
 
 在手机上`border`无法达到想要的效果。
-这是因为devicePixelRatio特性导致，iPhone的devicePixelRatio==2，而`border-width: 1px`描述的是设备独立像素，所以，border被放大到物理像素2px显示，在iPhone上就显得较粗。
+这是因为devicePixelRatio特性导致，`iPhone`的`devicePixelRatio==2`，而`border-width: 1px`描述的是设备独立像素，所以，border被放大到物理像素2px显示，在iPhone上就显得较粗。
 
--  使用`border-image`属性实现物理1px
+- 使用`border-image`属性实现物理1px
 
-通常手机端的页面设计稿都是放大一倍的，如：为适应iphone retina，设计稿会设计成640*960的分辨率，图片按照2倍大小切出来，在手机端看着就不会虚化，非常清晰。
+通常手机端的页面设计稿都是放大一倍的，如：为适应`iphone retina`，设计稿会设计成640*960的分辨率，图片按照2倍大小切出来，在手机端看着就不会虚化，非常清晰。
 
 同样，在使用`border-image`时，将border设计为物理1px
 

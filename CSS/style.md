@@ -49,6 +49,7 @@
 ◆IE7 遨游认识的hacker是星号`*`
 
 **例子**：
+
 ```css
 div{
     height:300px;
@@ -56,22 +57,22 @@ div{
     _height:100px;
 } 
 ```
+
 说明：
 
     1.IE6浏览器在读到height:300px的时候会认为高是300px；继续往下读，它也认识*heihgt，所以当IE6读到*height:200px的时候会覆盖掉前一条的冲突属性值，认为高度是200px。继续往下读，IE6还认识_height,所以他又会覆盖掉200px高的设置，把高度设置为100px；
     2.IE7和遨游也是一样的从高度300px的设置往下读。当它们读到*height200px的时候就停下了，因为它们不认识_height。所以它们会把高度解析为200px；
     3.剩下的浏览器只认识第一个height:300px。
-    
+
 > 因为优先级相同且想冲突的属性设置后一个会覆盖掉前一个，所以书写的次序是很重要的。
 
-
-#### 6.IE6怪异解析，把padding与border算入宽高 
+#### 6.IE6怪异解析，把padding与border算入宽高
 
 答：
 
-**问题症状**：未加文档声明造成非盒模型解析 
+**问题症状**：未加文档声明造成非盒模型解析
 
-**解决方案**：加入文档声明`<!DOCTYPE html>` 
+**解决方案**：加入文档声明`<!DOCTYPE html>`
 
 **备注**：假如不加DOCTYPE声明，那么各个浏览器会根据自己的行为去理解网页，即IE浏览器会采用IE盒子模型去解释你的盒子，而Chrome会采用标准W3C盒子模型解释你的盒子，所以网页在不同的浏览器中就显示的不一样了。反之，假如加上了DOCTYPE声明，那么所有浏览器都会采用标准W3C盒子模型去解释你的盒子，网页就能在各个浏览器中显示一致了。
 
@@ -116,7 +117,7 @@ CSS3中有这样一个属性：box-sizing属性允许以特定的方式定义匹
     3.不设置宽度的时候宽度由内容撑开
     4.脱离文档流
     5.提升层级（半层） 层级包括【元素本身】和【元素内容】两部分，其中【元素内容】在上半层，【元素本身】在下半层
-    
+
 > 文档流是文档中可显示对象在排列时所占用的位置。
 
 元素加了浮动，会脱离文档流，按照指定的一个方向（`left/right/none`）移动直到碰到父级的边界或者另外一个浮动元素停止
@@ -124,6 +125,7 @@ CSS3中有这样一个属性：box-sizing属性允许以特定的方式定义匹
 补充：在IE6、7的元素浮动要并在同一行的元素都要加浮动
 
 #### 10.清除浮动的方法有哪些？
+
 答：
 
     1.给浮动元素的父级添加浮动 // 相对麻烦，要不断给父级加浮动
@@ -134,17 +136,16 @@ CSS3中有这样一个属性：box-sizing属性允许以特定的方式定义匹
     [推荐]5.给浮动元素的父级加.clear{zoom: 1}
     .clear:after{ content: ""; display: block; clear: both;}// 在IE6、7下浮动元素的父级有宽度就不用清除浮动  关键词：hasLayout
     6.给浮动元素的父级添加overflow: auto; 一定要配合zoom: 1; // IE6下不起作用
-      
-     
->  hasLayout 根据元素内容的大小 或者父级的父级的大小来重新的计算元素的宽高
-   
+
+> hasLayout 根据元素内容的大小 或者父级的父级的大小来重新的计算元素的宽高
+
     触发hasLayout有
-    1.display: inline-block
-    2.height: (任何值除了auto)
-    3.float: (left或right)
-    4.width: (任何值除了auto)
-    5.zoom: (除了normal外任意值) // 作用是放大和缩小 
-   
+    1. display: inline-block
+    2. height: (任何值除了auto)
+    3. float: (left或right)
+    4. width: (任何值除了auto)
+    5. zoom: (除了normal外任意值) // 作用是放大和缩小
+
 #### 11.什么时候用margin，什么时候用padding？
 
 答：
@@ -153,8 +154,7 @@ CSS3中有这样一个属性：box-sizing属性允许以特定的方式定义匹
     1.需要在border外侧添加空白区域时
     2.空白处不需要背景颜色时
     3.上下相连的两个盒子的空白，需要互相抵消时。例子：15px + 20px的margin，将得到20px的空白
-    
-    
+
     使用padding的条件有：
     1.需要在border内侧添加空白区域时
     2.空白处需要背景颜色时
@@ -168,7 +168,6 @@ CSS3中有这样一个属性：box-sizing属性允许以特定的方式定义匹
 
 可以继承：
 
-
 1.所有元素可以继承：`cursor`、`visibility`
 
 2.内联元素可以继承：`color`、`line-height`、`font`、【`font-style`、`font-variant`、`font-family`、`font-size`、`font-width`】、【`text-decoration`、`text-transform`】、【`letter-spacing`、`word-spacing`、`white-space`】
@@ -180,4 +179,3 @@ CSS3中有这样一个属性：box-sizing属性允许以特定的方式定义匹
 不可以继承：
 
 `width`、【`min-width`、`max-width`】、`height`、【`min-height`、`max-height`】、`display`、`margin`、`border`、`padding`、`background`、`position`、【`top`、`right`、`left`、`bottom`】、`float`、`clear`、`z-index`、`overflow`、`vertical-align`、`table-layout`
-
