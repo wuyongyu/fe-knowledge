@@ -87,3 +87,15 @@ Redux
     - 实现方式：由 `React-Redux`生成
   - index.html
   - server.js
+
+- 常用工具
+  - react-redux
+    - 除了 `React` 绑定，还有 `ng`，`ng2`，`backbone`，`deku`
+  - redux-thunk
+    - 实现异步`action`
+  - redux-gen
+    - 利用生成器，实现`middleware`
+  - react-router-redux
+  - react-redux-form
+
+> `Function`优先于 `ES6 Class` 优先于 `React.createClass`
