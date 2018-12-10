@@ -2,6 +2,11 @@ Mac软件
 ===
 
 - 微信
+- 百度网盘
+- Evernote
+- Quiver
+- Expressions
+- MacVim
 - Google Chrome
 - Sourcetree
 - Sublime Text
@@ -15,8 +20,14 @@ Mac软件
 - Shadow
 - Helm
 - iTerm 2
+- Tadama
 - JustFocus
 - MySQLWorkbench
 - Logitech Options
 - Sequel Pro
 - ShadowsocksX-NG-R8
+- Wireshark
+- Snappy
+- PxCook
+- Adobe Photoshop CC 2019
+- Adobe Illustrator CC 2019
