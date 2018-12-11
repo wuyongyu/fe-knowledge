@@ -99,3 +99,6 @@ Redux
   - react-redux-form
 
 > `Function`优先于 `ES6 Class` 优先于 `React.createClass`
+
+- 线上CDN文件
+  - https://cdnjs.com/libraries/redux/
