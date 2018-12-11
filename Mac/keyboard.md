@@ -1,19 +1,51 @@
 [快捷键](https://support.apple.com/zh-cn/HT201236)
 ===
 
-- Ctrl + Shift + Power // 屏保快捷键
-- Ctrl + Command + Q   // 锁屏快捷键 【会和QQ应用的快捷键冲突】
-- Ctrl + 左右方向键  // 换屏快捷键
-- Command + tab // 切换应用程序
-- Command + `  // 切换上一个应用程序，前提是切换应用程序
-- Ctrl + Command + F // 进入全屏模式
+> 系统
 
-> 不小心按到  command + F1 可以切换为投屏和分屏  -- 酷炫
-
+- Option  // 开机后立即按下，将启动管理器
+- 电源按钮  // 按下5秒，强制Mac关机
+- Command + R  // 开机后立即按下，可打开OS X的恢复功能（Recovery）
+- Control + Shift + Power  // 关闭显示器
+- Command + Control + Q  // 锁屏快捷键 【会和QQ应用的快捷键冲突】
+- Command + Control + 电源按钮  // 关闭所有应用程序并重新启动
+- Command + Option + ESC  // 打开强制退出应用程序
+- Command + F1  // 可以切换为投屏和分屏  -- 酷炫
 - Command + option + " `+` " 可以进行屏幕放大和缩小 【等价于 Control + "`鼠标滚轮`"】 // 设置路径， 系统偏好设置 -> 辅助功能 -> 缩放 -> `勾选`使用键盘快捷键进行缩放
-- Command + Shift + 4  // 可以截取屏幕部分内容
-- Control + 数字键  // 可以屏幕切换
 - Command + Shift + .  // 可以显示隐藏文件、文件夹，再按一次，恢复隐藏
-- Command + option + ESC  // 打开强制退出应用程序
-- Control–Command–电源按钮  // 重新启动
-- Ctrl + Command + 空格键  // 插入表情
+- Command + Space  // 切换输入法
+
+> 截图
+
+- Command + Shift + 3  // 可以截取屏幕全部内容
+- Command + Shift + Control + 3  // 可以截取屏幕全部内容到剪切板
+- Command + Shift + 4  // 可以截取屏幕部分内容
+- Command + Shift + Control + 4  // 可以截取屏幕部分内容到剪切板
+
+> 文件管理
+
+- Space  // 快速查看选中的文件，也就是预览功能
+- Command + Option + V  // 相当于Windows里面的文件剪切
+- Command + Delete  // 将文件移至废纸篓
+
+> 切换
+
+- Command + Tab  // 在应用程序之间切换【可以用 Command + ` 进行应用程序的反向切换，前提是切换应用程序】
+- Command + Shift + Tab  // 在应用程之间反向切换
+- Control + 左右方向键  // 换屏快捷键
+- Control + 数字键  // 可以屏幕切换
+
+> 浏览器
+
+- Control + Tab // 切换下一个标签页
+- Control + shift + Tab // 切换上一个标签页
+- Command + 数字键  // 可以切换标签页
+- Command + L  // 光标直接跳至地址栏
+- Control + Command + F // 进入全屏模式
+
+> 文本处理
+
+- Fn + Delete // 向后删除
+- Option + 左右方向键  // 将光标移至上/下一个单词的开头/末尾
+- Control + A  // 光标移至行或者段落的开头
+- Control + Command + 空格键  // 插入表情
