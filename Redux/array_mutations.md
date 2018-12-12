@@ -1,9 +1,10 @@
 Array Mutations with `concat()`,`slice()` and `...spread`
 ===
 
-- 在HTML加上 `<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.0.8/es5-shim.min.js"></script>`
-、`<script src="https://cdnjs.cloudflare.com/ajax/libs/expect/1.20.2/expect.js"></script>`
-、`<script src="https://cdn.jsdelivr.net/npm/deep-freezer@2.0.4/index.min.js"></script>`
+- 在HTML加上
+  - `<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.0.8/es5-shim.min.js"></script>`
+  - `<script src="https://cdnjs.cloudflare.com/ajax/libs/expect/1.20.2/expect.js"></script>`
+  - `<script src="https://cdn.jsdelivr.net/npm/deep-freezer@2.0.4/index.min.js"></script>`
 
 ```javascript
 // 初始版
