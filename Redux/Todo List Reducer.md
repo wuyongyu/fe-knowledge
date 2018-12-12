@@ -6,28 +6,53 @@ Todo List Reducer
   - `<script src="https://cdn.jsdelivr.net/npm/deep-freezer@2.0.4/index.min.js"></script>`
 
 ```javascript
+const todo = (state, action) => {
+  switch (action.type){
+    case: "ADD_TODO":
+      return {
+        id: action.id,
+        text: action.text,
+        completed: false
+      };
+    case "TOGGLE_TODO":
+      if(state.id !== action.id){
+          return state;
+        }
+      return {
+        ...state,
+        completed: !state.completed
+      };
+    default:
+      return state;
+  }
+}
+
 const todos = (state = [], action) => {
   switch(action.type){
     case "ADD_TODO":
       return [
         ...state,
-        {
-          id: action.id,
-          text: action.text,
-          completed: false
-        }
+        // {
+        //   id: action.id,
+        //   text: action.text,
+        //   completed: false
+        // }
+        // 重构
+        todo(undefined, action);
       ];
     case "TOGGLE_TODO":
-      return state.map(todo => {
-        if(todo.id !== action.id){
-          return todo;
-        }
-        return {
-          ...todo,
-          completed: !todo.completed
-        };
-      })
-    default: 
+      // return state.map(todo => {
+      //   if(todo.id !== action.id){
+      //     return todo;
+      //   }
+      //   return {
+      //     ...todo,
+      //     completed: !todo.completed
+      //   };
+      // })
+      // 重构
+      return state.map(t => todo(t, action));
+    default:
       return state;
   }
 };
