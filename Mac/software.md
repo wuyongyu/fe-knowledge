@@ -3,6 +3,7 @@ Mac软件
 
 - 微信
 - 百度网盘
+- 迅雷
 - Evernote
 - Quiver
 - Expressions
@@ -31,3 +32,7 @@ Mac软件
 - PxCook
 - Adobe Photoshop CC 2019
 - Adobe Illustrator CC 2019
+- Sketch
+- Trello
+- Postman
+- BrowserStack Local
