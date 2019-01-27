@@ -15,7 +15,7 @@ Why optimization is necessary?
 Next-Generation JavaScript Engines
 
 - Chrome 的V8引擎，V8是一款为 JavaScript 打造的实时编译引擎（JIT），它把 JavaScript 代码转化为机器码来执行，所以给人的感觉是 JavaScript 执行速度特别快
-- Safari 的Nitro引擎（SquirrelFish Extreme）
+- Safari 的Nitro引擎（SquirrelFish Extreme）[SquirrelFish 金鳞鱼]
 - FireFox 的TraceMonkey引擎
 
 1、加载和执行
@@ -24,11 +24,11 @@ Next-Generation JavaScript Engines
 Loading and Execution
 
 - 减少 JavaScript 对性能的影响
-  1. `</body>`闭合标签之前，将所有的`<script>`标签放到页面底部。因为能保证在脚本执行前，页面已经完成渲染
-  2. 合并脚本。加载速度更快，响应速度也更快
-  3. 使用`<script>`脚本的defer属性
-  4. 使用动态创建的`<script>`元素来下载并执行代码
-  5. 使用 XHR 对象下载 JavaScript 代码并注入代码中
+  - `</body>`闭合标签之前，将所有的`<script>`标签放到页面底部。因为能保证在脚本执行前，页面已经完成渲染
+  - 合并脚本。加载速度更快，响应速度也更快
+  - 使用`<script>`脚本的defer属性
+  - 使用动态创建的`<script>`元素来下载并执行代码
+  - 使用 XHR 对象下载 JavaScript 代码并注入代码中
 
 2、数据存取
 ---
