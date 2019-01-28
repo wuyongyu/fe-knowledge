@@ -46,3 +46,49 @@ Data Access
 - 在大部分浏览器中，通过点表示法（Object.name）操作和通过括号表示法（Object["name"]）操作并没有明显的区别。只有在Safari中，点表示法始终会更快一些而已。
 
 - 通常来说，在一个函数中，如果要多次读取同一个对象属性，最佳的做法是将属性值保存到局部变量中。因为局部变量能用来替代属性，以避免多次查找带来的性能开销
+
+3、DOM编程
+---
+
+```javascript
+// 较慢
+function collectionGlobal(){
+  var coll = document.getElementsByTagName('div'),
+    len = coll.length,
+    name = '';
+  for(var count = 0; count < len; count++){
+    name = document.getElementsByTagName('div')[count].nodeName;
+    name = document.getElementsByTagName('div')[count].nodeType;
+    name =document.getElementsByTagName('div')[count].tagName;
+  }
+  return name;
+}
+
+// 较快
+function collectionGlobal(){
+  var coll = document.getElementsByTagName('div'),
+    len = coll.length,
+    name = '';
+  for(var count = 0; count < len; count++){
+    name = coll[count].nodeName;
+    name = coll[count].nodeType;
+    name = coll[count].tagName;
+  }
+  return name;
+}
+
+// 最快
+function collectionGlobal(){
+  var coll = document.getElementsByTagName('div'),
+    len = coll.length,
+    name = '',
+    el = null;
+  for(var count = 0; count < len; count++){
+    el = coll[count];
+    name = el.nodeName;
+    name = el.nodeType;
+    name = el.tagName;
+  }
+  return name;
+}
+```
