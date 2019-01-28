@@ -92,3 +92,5 @@ function collectionGlobal(){
   return name;
 }
 ```
+
+- 在老版本IE中，`nextSibling` 比 `childNode`表现更优异，在 IE6 中，`nextSibling`快16倍，而 IE7 中，则是105倍，所以更推荐使用 `nextSibling` 方法来查找 DOM 节点。
