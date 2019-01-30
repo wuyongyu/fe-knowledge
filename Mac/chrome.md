@@ -15,6 +15,7 @@ Chrome
 - Command + Option + 向左方向键  // 跳到上一个标签页【不受当前页面是否是加载状态，比`Vimium`里面的`J`好用多了】
 - Command + 9  // 打开最后一个标签页【当有多个标签页时挺有用的】
 - Command + 向左方向键  // 打开上一个页面 【跟 `Vimium`里面的`H`快捷键类似】
+- Command + Shift + P  // 打开配置选择界面【主要是选择Rendering】
 
 > Chrome 插件
 
