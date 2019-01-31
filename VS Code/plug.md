@@ -18,6 +18,7 @@
 - file-icons
 - Git Blame
 - Git History
+- GitLens-Git supercharged
 - Guides
 - HTML CSS Support
 - HTML Snippets
