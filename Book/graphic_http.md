@@ -97,3 +97,15 @@
 - 状态码404（Not Found，服务器上没有请求的资源）
 - 状态码500（Internet Service Error，服务器内部资源出故障，也可能是`Web应用`存在的`bug`或某些临时的故障）
 - 状态码503（Service Unavailable，服务器暂时处于超负载或正在进行停机维护，现在无法处理请求）
+
+第五章、与HTTP协作的`Web服务器`
+---
+
+- Web托管服务（Web Hosting Service）
+- 虚拟主机（Virtual Host，虚拟服务器）
+- 缓存代理（Caching Proxy）
+- 透明代理（Transparent Proxy）
+- NNTP（Network News Transfer Protocol，用于 `NetNews` 电子会议室内传送消息的协议【不常用】）
+- Archie（搜索 `anonymous FTP` 公开的文件信息的协议【不常用】）
+- WAIS（Wide Area Information Servers，以关键词搜索多个数据库使用的协议【不常用】）
+- Gopher（查找与互联网连接的计算机内信息的协议【不常用】）
