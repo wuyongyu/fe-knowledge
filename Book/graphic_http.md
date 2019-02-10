@@ -57,7 +57,8 @@
 - 持久连接（HTTP persistent Connections，也称 HTTP keep-alive 或 HTTP connection reuse）
 - 管线化（pipelining）
 
-第三章、HTTP报文
+第三章、HTTP报文内的`HTTP`信息
+---
 
 - 字节流（octet sequence）
 - 报文（message）
@@ -66,9 +67,33 @@
 - 传输编码（Transfer Coding）
 - MIME（Multipurpose Internet Mail Extension，多用途因特网邮件拓展）
 - 多部分对象集合（Multipart）
-- 状态码206（Partial Connect，部分内容）
 - 范围请求（Range Request）
 - 内容协商（Content Negotiation）
 - 服务器驱动协商（Server-driven Negotiation）
 - 客户端驱动协商（Agent-driven Negotiation）
 - 透明协商（Transparent Negotiation）
+
+第四章、返回结果的HTTP状态码
+---
+
+- Informational（信息性状态码）
+- Success（成功状态码）
+- Redirection（重定向状态码）
+- Client Error（客户端错误状态码）
+- Service Error（服务器错误状态码）
+- WebDAV（Web-based Distributed Authoring and Versioning，基于万维网的分布式创作和版本控制）
+- 状态码200（OK，正常处理）
+- 状态码204（No Content，没有资源可以返回）
+- 状态码206（Partial Connect，部分内容）
+- 状态码301（Moved Permanently，永久性重定向）
+- 状态码302（Found，临时性重定向）
+- 状态码303（See Other，资源的`URI`已经更新，是否能临时按新的`URI`访问）
+- 状态码304（Not Modified，服务器资源未改变，可直接使用客户端未过期的缓存）
+- 状态码307（Temporary Redirect，临时性重定向，会遵守浏览器标准，不会从`POST`变成`GET`）
+- 状态码400（Bad Request，请求报文中存在语法错误）
+- 状态码401（Unauthorized，发送的请求需要有通过HTTP认证、BASIC认证、DIGEST认证等信息）
+- 质询（challenge）
+- 状态码403（Forbidden，请求资源的访问被服务器拒绝）
+- 状态码404（Not Found，服务器上没有请求的资源）
+- 状态码500（Internet Service Error，服务器内部资源出故障，也可能是`Web应用`存在的`bug`或某些临时的故障）
+- 状态码503（Service Unavailable，服务器暂时处于超负载或正在进行停机维护，现在无法处理请求）
