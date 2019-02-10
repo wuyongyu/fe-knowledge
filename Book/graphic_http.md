@@ -1,6 +1,8 @@
 图解HTTP
 ===
 
+> 专业名称都是人为规定，会有一定的道理。
+
 第一章、了解Web和网络基础
 ---
 
@@ -36,3 +38,21 @@
 - ICANN（Internet Corporate For Assigned Names And Numbers，互联网名称和数字地址分配机构）
 - IANA（Internet Assigned Numbers Authority，互联网号码分配局）
 - RFC（Request For Comments，征求修正意见书）
+
+第二章、简单的HTTP协议
+---
+
+- 方法（method）
+- 请求URI（request-URI）
+- 状态码（status code）
+- 原因短语（reason-phrase）
+- 首部字段（header field）
+- 主体（entity body）
+- 无状态（stateless）
+- CGI（Common Gateway Interface，通用网关接口）
+- REST（Representational State Transfer，表征状态转移）
+- XST（Cross-Site Tracing，跨站追踪）
+- SSL（Secure Sockets Layer，安全套接层）
+- TLS（Transport Layer Security，传输层安全）
+- 持久连接（HTTP persistent Connections，也称 HTTP keep-alive 或 HTTP connection reuse）
+- 管线化（pipelining）
