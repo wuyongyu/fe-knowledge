@@ -56,3 +56,19 @@
 - TLS（Transport Layer Security，传输层安全）
 - 持久连接（HTTP persistent Connections，也称 HTTP keep-alive 或 HTTP connection reuse）
 - 管线化（pipelining）
+
+第三章、HTTP报文
+
+- 字节流（octet sequence）
+- 报文（message）
+- 实体（entity）
+- 分块传输编码（Chunked Transfer Coding）
+- 传输编码（Transfer Coding）
+- MIME（Multipurpose Internet Mail Extension，多用途因特网邮件拓展）
+- 多部分对象集合（Multipart）
+- 状态码206（Partial Connect，部分内容）
+- 范围请求（Range Request）
+- 内容协商（Content Negotiation）
+- 服务器驱动协商（Server-driven Negotiation）
+- 客户端驱动协商（Agent-driven Negotiation）
+- 透明协商（Transparent Negotiation）
