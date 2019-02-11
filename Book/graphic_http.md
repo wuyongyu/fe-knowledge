@@ -219,3 +219,15 @@
 - 双因素认证（Two-factor authentication）
 - 登录信息（Credential）
 - 会话（Session）
+
+第九章、基于HTTP的功能追加协议
+---
+
+- SNS（Social Network Service，社交网络服务）
+- SPDY（取自SPeeDY，发音同speedy）
+- Ajax（Asynchronous JavaScript and XML，异步`JavaScript`与`XML`技术）
+- DOM（Document Object Model，文档对象模型）
+- 集合（Collection）
+- 资源（Resource）
+- 属性（Property）
+- 锁（Lock）
