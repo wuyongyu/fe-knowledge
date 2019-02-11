@@ -91,7 +91,7 @@
 - 状态码304（Not Modified，服务器资源未改变，可直接使用客户端未过期的缓存）
 - 状态码307（Temporary Redirect，临时性重定向，会遵守浏览器标准，不会从`POST`变成`GET`）
 - 状态码400（Bad Request，请求报文中存在语法错误）
-- 状态码401（Unauthorized，发送的请求需要有通过HTTP认证、BASIC认证、DIGEST认证等信息）
+- 状态码401（Unauthorized，发送的请求需要有通过HTTP认证、BASIC基本认证、DIGEST摘要认证等信息）
 - 质询（challenge）
 - 状态码403（Forbidden，请求资源的访问被服务器拒绝）
 - 状态码404（Not Found，服务器上没有请求的资源）
@@ -212,3 +212,10 @@
 - CBC模式（Cipher Block Chaining，密码分组链接模式）
 - MAC（Message Authentication Code）
 - IETF（Internet Engineering Task Force，Internet工程任务组）
+
+第八章、确认访问用户身份的认证
+---
+
+- 双因素认证（Two-factor authentication）
+- 登录信息（Credential）
+- 会话（Session）
