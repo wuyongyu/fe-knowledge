@@ -187,3 +187,28 @@
 - 同源域名下的页面（Top-level-browsing-context）
 - DNT（Do Not Track，拒绝个人信息被收集）
 - P3P（The Platform for Privacy Preferences，在线隐私偏好平台）
+
+第七章、确保Web安全的`HTTPS`
+---
+
+- 抓包（Packet Capture）
+- 嗅探器工具（Sniffer）
+- HTTPS（HTTP Secure，超文本传输安全协议【HTTP over SSL】）
+- DoS攻击（Denial of Service，拒绝服务攻击）
+- 中间人攻击（Man-in-the-Middle attack，MITM）
+- PGP（Pretty Good Privacy，完美隐私）
+
+> HTTP加上加密处理和认证以及完整性保护后即是`HTTPS`
+
+- 公开密钥加密（Public-key cryptography）
+- 共享密钥加密（Common key crypto system，也叫对称密钥加密）
+- 私有密钥（private key）
+- 公开密钥（public key）
+- 数字证书认证机构（CA，Certificate Authority）
+- EV SSL证书（Extended Validation SSL Certificate）
+- 钓鱼攻击（Phishing）
+- 证书吊销列表（Certificate Revocation List，CRL）
+- 根证书颁布机构（Root Certificate Authority，RCA）
+- CBC模式（Cipher Block Chaining，密码分组链接模式）
+- MAC（Message Authentication Code）
+- IETF（Internet Engineering Task Force，Internet工程任务组）
