@@ -231,3 +231,17 @@
 - 资源（Resource）
 - 属性（Property）
 - 锁（Lock）
+
+第十章、构建Web内容的技术
+---
+
+- W3C（World Wide Web Consortium）
+- CSS（Cascading Style Sheets，层叠样式表）
+- API（Application Programming Interface，应用程序接口）
+- 互联网（Internet）
+- 企业内网（Intranet）
+- 企业级Java（JavaEE，Java Enterprise Edition）
+- XML（eXtensible Markup Language，可拓展标记语言）
+- 语法分析器（Parser）
+- RSS（简易信息聚合）
+- JSON（JavaScript Object Notation）
