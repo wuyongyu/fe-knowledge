@@ -245,3 +245,31 @@
 - 语法分析器（Parser）
 - RSS（简易信息聚合）
 - JSON（JavaScript Object Notation）
+
+第十一章、Web的攻击技术
+
+- 主动攻击（active attack）
+- 被动攻击（passive attack）
+- SQL注入（SQL Injection）
+- 关系型数据库管理系统（Relational DataBase Management System，RDBMS）
+- OS命令注入攻击（OS Command Injection）
+- HTTP首部注入攻击（HTTP Header Injection）
+- HTTP响应截断攻击（HTTp Response Splitting Attack）
+- 邮箱首部注入（Mail Header Injection）
+- 目录遍历（Directory Traversal）
+- 路径遍历（Path Traversal）
+- 远程文件包含漏洞（Remote File Inclusion）
+- 强制浏览（Forced Browsing）
+- 不正确的错误信息处理（Error Handing Vulnerability）
+- 开放重定向（Open Redirect）
+- 会话劫持（Session Hijack）
+- 会话固定攻击（Session Fixation）
+- 跨站点请求伪造（Cross-site Request Forgeries，CSRF）
+- 密码破解（Password Cracking）
+- 穷举法（Brute-force Attack，又称暴力破解法）
+- 秘钥空间（Keyspace）
+- 彩虹表（Rainbow Table）
+- 界面伪装（UI Redressing）
+- DoS攻击（Denial of Service attack）
+- DDos攻击（Distributed Denial of Service attack）
+- 后门程序（Backdoor）
