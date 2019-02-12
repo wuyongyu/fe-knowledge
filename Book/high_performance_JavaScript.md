@@ -213,3 +213,44 @@ function second(){
 
 first();
 ```
+
+第五章、字符串和正则表达式
+---
+
+String and Regular Expressions
+
+> 将正则表达式赋给变量以避免对它们重新编译
+
+```javascript
+// 不好的写法
+while(/regex1/.test(str1)){
+  /regex2/.exec(str2);
+  // ...
+}
+// 好的写法
+var regex1 = /regex1/,
+    regex2 = /regex2/;
+while(regex1.test(str1)){
+  regex2.exec(str2);
+  // ...
+}
+```
+
+- 使用正则表达式去除首尾空白（Trimming with Regular Expressions）
+- [regular expressions 101 -- 好用！！！](https://regex101.com/)
+
+```javascript
+if(!String.prototype.trim){
+  String.prototype.trim = function() {
+    return this.replace(/^\s+/, "").replace(/\s+$/, "");
+    // 第二种方式
+    // return this.replace(/^\s+|\s+$/g, "");
+    // 第三种方式
+    // return this.replace(/^\s*([\s\S]*?)\s*$/, "$1");
+    // 第四种方式
+    // return this.replace(/^\s*([\s\S]*\S)?\s*$/, "$1");
+    // 第五种方式
+    // return this.replace(/^\s*(\S*(\s+\S+)*)\s*$/, "$1");
+  }
+}
+```
