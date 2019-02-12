@@ -50,6 +50,8 @@ Data Access
 第三章、DOM编程
 ---
 
+DOM Scripting
+
 ```javascript
 // 较慢
 function collectionGlobal(){
@@ -139,4 +141,75 @@ document.getElementById('menu').onclick = function(e) {
     e.cancelBubble = true;
   }
 }
+```
+
+第四章、算法和流程控制
+---
+
+Algorithms and Flow Control
+
+> 代码数量少并不意味着运行速度就快（之前一直以为代码越少越好，看来too young too simple），代码数量越多也不意味着运行速度就慢。`代码的组织结构`和`解决具体问题的思路`是影响代码性能的主要原因
+
+- 循环性能（Loop Performance）
+
+```javascript
+const props = ["prop1", "prop2"],
+      len = props.length;
+let i = 0;
+// 循环类型的选择应该基于需求而不是性能
+while(i < len){
+  process(object[props[i++]]);  // 一次函数调用（process(object["prop1"])）
+}
+```
+
+- 达夫设备（Duff’ Device）
+
+```javascript
+// 迭代数超过1000，旧浏览器的执行效率会明显提升。了解就行
+var iterations = Math.floor(items.length / 8),
+    startAt = items.length % 8,
+    i = 0;
+do {
+  switch(startAt){
+    case 0: process(items[i++]);
+    case 7: process(items[i++]);
+    case 6: process(items[i++]);
+    case 5: process(items[i++]);
+    case 4: process(items[i++]);
+    case 3: process(items[i++]);
+    case 2: process(items[i++]);
+    case 1: process(items[i++]);
+  }
+  startAt = 0;
+} while (iterations--);  // 书中有误
+```
+
+- 查找表（Lookup Tables）
+
+```javascript
+// 将返回值集合存入数组
+var results = [result0, result1, result2, result3, result4, result5, result6, result7, result8, result9, result10];
+// 返回当前结果
+return results[value];
+```
+
+- 递归模式（Recursion Patterns）
+
+```javascript
+// 直接递归模式
+function recurse(){
+  recurse();
+}
+
+recurse();
+
+// 隐伏模式
+function first(){
+  second();
+}
+function second(){
+  first();
+}
+
+first();
 ```
