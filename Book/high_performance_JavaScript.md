@@ -18,7 +18,7 @@ Next-Generation JavaScript Engines
 - Safari 的Nitro引擎（SquirrelFish Extreme）[SquirrelFish 金鳞鱼]
 - FireFox 的TraceMonkey引擎
 
-1、加载和执行
+第一章、加载和执行
 ---
 
 Loading and Execution
@@ -30,7 +30,7 @@ Loading and Execution
   - 使用动态创建的`<script>`元素来下载并执行代码
   - 使用 XHR 对象下载 JavaScript 代码并注入代码中
 
-2、数据存取
+第二章、数据存取
 ---
 
 Data Access
@@ -47,7 +47,7 @@ Data Access
 
 - 通常来说，在一个函数中，如果要多次读取同一个对象属性，最佳的做法是将属性值保存到局部变量中。因为局部变量能用来替代属性，以避免多次查找带来的性能开销
 
-3、DOM编程
+第三章、DOM编程
 ---
 
 ```javascript
@@ -94,3 +94,49 @@ function collectionGlobal(){
 ```
 
 - 在老版本IE中，`nextSibling` 比 `childNode`表现更优异，在 IE6 中，`nextSibling`快16倍，而 IE7 中，则是105倍，所以更推荐使用 `nextSibling` 方法来查找 DOM 节点。
+
+- 帧（frames）
+- 盒（boxes）
+- 内边距（padding）
+- 外边距（margins）
+- 边框（border）
+- 位置（position）
+- 绘制（paint）
+- 重绘（repaint）
+- 重排（reflow）
+- 文档片段（document fragment）
+- 偏移量（offsets）
+- 滚动位置（scroll values）
+- 计算出的样式值（computedstyle values）
+
+> 事件委托（Event Delegation）
+
+```html
+<ul id="menu">
+  <li>
+    <a href="menu.html">menu</a>
+  </li>
+</ul>
+```
+
+```javascript
+document.getElementById('menu').onclick = function(e) {
+  // 浏览器 target
+  e = e || window.event;
+  var target = e.target || e.srcElement;
+
+  // 只关心 href，非链接点击则退出
+  if (target.nodeName !== 'A') {
+    return;
+  }
+
+  // 浏览器组织默认行为取消冒泡
+  if (typeof e.preventDefault === 'function') {
+    e.preventDefault();
+    e.stopPropagation();
+  } else {
+    e.returnValue = false;
+    e.cancelBubble = true;
+  }
+}
+```
