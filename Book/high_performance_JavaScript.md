@@ -181,7 +181,7 @@ do {
     case 1: process(items[i++]);
   }
   startAt = 0;
-} while (iterations--);  // 书中有误
+} while (iterations--);  // 书中有误，while里面的条件判断也可以为 --iteration > 0
 ```
 
 - 查找表（Lookup Tables）
@@ -252,5 +252,102 @@ if(!String.prototype.trim){
     // 第五种方式
     // return this.replace(/^\s*(\S*(\s+\S+)*)\s*$/, "$1");
   }
+}
+```
+
+第六章、快速响应的用户界面
+---
+
+Response Interface
+
+- 任何 `JavaScript` 任务都不应当执行超过`100毫秒`，过长的时间会导致 `UI` 出现明显的延迟，从而对用户体验产生负面影响
+
+- 分割任务（Splitting Up Tasks）
+  - 定时器可用来安排代码**延时执行**，因此我们可以把长时间运行的代码分解成一系列小任务
+
+```javascript
+// 一个原始任务A
+function saveDocument(id){
+  // 保存文档
+  openDocument(id);
+  writeText(id);
+  closeDocument(id);
+
+  // 将成功信息更新至界面
+  updateUI(id);
+}
+
+// 拆解 - 原始任务A
+function saveDocument(id){
+  var tasks = [openDocument, writeText, closeDocument, updateUI];
+  setTimeout(function(){
+    // 执行下一个任务
+    var task = tasks.shift();
+    task(id);
+
+    // 检查是否还有其他任务
+    if(tasks.length > 0){
+      setTimeout(arguments.callee, 25);
+    }
+  }, 25);
+}
+
+// 封装 - 原始任务A
+function multitask(steps, args, callback){
+  var tasks = steps.concat();
+  setTimeout(function(){
+    // 执行下一个任务
+    var task = tasks.shift();
+    task.apply(null, args || []);
+
+    // 检查是否还有其他任务
+    if(tasks.length > 0){
+      setTimeout(argument.callee, 25);
+    } else {
+      callback();
+    }
+  }, 25);
+}
+function saveDocument(id){
+  var tasks = [openDocument, writeText, closeDocument, updateUI];
+  multitask(tasks, [id], function(){
+    console.log("save completed");
+  })
+}
+
+// -------------- 补充 arguments.callee --------------
+function f(){
+  console.log(arguments.callee);
+}
+f();  // 会返回f函数本身，因此，可以看出callee属性，会指向当前执行的函数
+
+// -------------- 补充 arguments.caller --------------
+function f1(){
+  console.log(arguments.callee.caller);
+}
+function f2(){
+  f1();
+}
+f1();  // 会返回null
+f2();  // 会返回f2函数本身，因此，可以看出caller属性，会返回调用它的函数对象
+```
+
+- 与 `Worker` 通信（Worker Communication）
+  - `Worker`是新版浏览器支持的特性，它允许在 `UI 线程`**外部执行** `JavaScript` 代码，从而避免锁定 `UI`
+  - `Worker` 与网页代码通过**事件接口进行通信**
+  - `Worker`有一个用来接受信息的 `onmessage` 事件处理器
+  - `Worker`可以通过它自己的 `postMessage()` 方法把信息回传给页面
+
+```javascript
+// Worker例子
+var worker = new Worker("code.js");
+worker.onmessage = function(event){
+  console.log(event.data);
+};
+worker.postMessage("Worker's code");
+
+// code.js内部代码
+self.onmessage = function(event){
+  self.postMessage("Hello, " + event.date + "!");
 }
 ```
