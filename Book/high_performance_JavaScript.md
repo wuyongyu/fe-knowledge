@@ -598,3 +598,45 @@ Building and Deploying High-Performance JavaScript Applications
 - 在服务器端压缩 JavaScript 文件（Gzip编码）
 - 通过正确设置 HTTP 响应头来缓存 JavaScript 文件，通过向文件名添加时间戳来避免缓存问题
 - 使用 CDN（Content Delivery Network）提供 JavaScript 文件；CDN 不仅可以提高性能，也为我们管理文件的压缩与缓存
+
+第十章、工具
+---
+
+Tools
+
+- 编写Timer对象
+
+```javascript
+let Timer = {
+  _data: {},
+  start: function(key){
+    let startDate =  new Date().getTime();
+    Timer._data[key] = startDate;
+    console.log(startDate, '开始时间戳');
+  },
+  stop: function(key){
+    let stopDate = new Date().getTime(),
+        time = Timer._data[key];
+        result = stopDate - time;
+    Timer._data[key] = result;
+    console.log(stopDate, '结束时间戳');
+    console.log(result, '开始到结束的时间差值');
+  },
+  getTime: function(key){
+    return Timer._data[key];
+  }
+}
+
+Timer.start('createElement');
+for(let i = 0; i < 10000; i++){
+  element = document.createElement('div');
+}
+Timer.stop('createElement');
+```
+
+- [YUI Profiler](https://yuilibrary.com/)
+- [Firebug](https://getfirebug.com/)
+- [Page Speed](https://developers.google.com/speed/)
+- [Fiddler](https://www.telerik.com/fiddler)
+- [YSlow](http://yslow.org/)
+- [dyna Trace Ajax Edition](https://www.dynatrace.com/)
