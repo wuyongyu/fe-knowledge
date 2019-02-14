@@ -109,7 +109,7 @@ function collectionGlobal(){
 - 文档片段（document fragment）
 - 偏移量（offsets）
 - 滚动位置（scroll values）
-- 计算出的样式值（computedstyle values）
+- 计算出的样式值（computed style values）
 
 > 事件委托（Event Delegation）
 
@@ -350,4 +350,176 @@ worker.postMessage("Worker's code");
 self.onmessage = function(event){
   self.postMessage("Hello, " + event.date + "!");
 }
+```
+
+第七章、Ajax
+---
+
+- Ajax使用范例
+
+```javascript
+var url = 'data.php';
+var params = [
+  'id=123456',
+  'limit=20'
+];
+var req = new XMLHttpRequest();
+req.onreadystatechange = function(){
+  // 接收到部分数据，但不是所有
+  if(req.readyState === 3){
+    var dataSoFar = req.responseText;
+    // 数据处理
+  }
+  // 接收到所有数据
+  if(req.readyState === 4){
+    // 获取请求头信息
+    var responseHeaders = req.getAllResponseHeaders();
+    var data = req.responseText;
+    // 数据处理
+  }
+}
+req.open('GET', url + '?' + params.join('&', true));
+// 设置请求头信息
+req.setRequestHeader('X-Request-With', 'XMLHttpRequest');
+// 发送一个请求
+req.send(null);
+```
+
+- 动态脚本注入
+  - 优势是能**跨域请求数据**
+  - 缺点是不能设置请求的头信息，参数传递也只能使用GET方式
+  - 重要的点是，因为响应信息作为脚本标签的源码，它必须是可执行的 JavaScript 代码，不能使用纯 `XML`、纯`JSON`或其他数据格式，而且必须封装在一个回调函数中
+
+```javascript
+var scriptElement = document.createElement('script');
+scriptElement.src = 'http://any-domain.com/javascript/lib.js';
+document.getElementByTagName('head')[0].appendChild(scriptElement);
+
+// lib.js文件需要把数据封装在 jsonCallback 里面
+function jsonCallback(jsonString){
+  var data = eval('(' + jsonString + ')');
+  // 处理数据
+}
+jsonCallback({"status": 1, "color": ["#fff", "#000", "#ff00000"]});
+```
+
+- 发送数据（Sending Data）
+
+```javascript
+var url = 'data.php';
+var params = [
+  "id=123456",
+  "limit=20"
+];
+function xhrPost(url, params, callback){
+  var req = new XMLHttpRequest();
+  req.onerror = function(){
+    // 出错处理
+    setTimeout(function(){
+      xhrPost(url, params, callback);
+    }, 1000);
+  }
+  req.onreadystatechange = function(){
+    if(req.readyState === 4){
+      // 成功处理
+      if(callback && typeof callback === 'function'){
+        callback();
+      }
+    }
+  }
+  req.open('POST', url, true);
+  req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  req.setRequestHeader('Content-Length', params.length);
+  req.send(params.join('&');
+}
+```
+
+- XML解析
+
+```xml
+<?xml version="1.0" encoding="UTF-8">
+<User total="4">
+  <User id="1-id001" username="alice" realname="Alice Smith" email="alice@mail.com" />
+  <User id="2-id002" username="bob" realname="Bob Smith" email="bob@mail.com" />
+  <User id="3-id003" username="carol" realname="Carol Smith" email="Carol@mail.com" />
+  <User id="4-id004" username="dave" realname="Dave Smith" email="dave@mail.com" />
+</User>
+```
+
+```javascript
+function parseXML(){
+  var users = [];
+  var userNodes = responseXML.getElementByTagName('User');
+  for(var i = 0,len = userNodes.length; i < len; i++){
+    users[i] = {
+      id: userNodes[i].getAttribute('id');
+      username: userNodes[i].getAttribute('username');
+      realname: userNodes[i].getAttribute('realname');
+      email: userNodes[i].getAttribute('email');
+    }
+  }
+  return users;
+}
+```
+
+- JSON解析
+
+```json
+[
+  [1, "alice", "Alice Smith", "alice@mail.com"],
+  [2, "bob", "Bob Smith", "bob@mail.com"],
+  [3, "carol", "Carol Smith", "carol@mail.com"],
+  [4, "dave", "Dave Smith", "dave@mail.com"],
+]
+```
+
+```javascript
+function parseJSON(responseText){
+  var users = [];
+  var usersArray = eval('(' responseText ')');
+  for(var i = 0, len = usersArray.length; i < len; i++){
+    users[i] = {
+      id: usersArray[i][0],
+      username: usersArray[i][1],
+      realname: usersArray[i][2],
+      email: usersArray[i][3]
+    }
+  }
+  return users;
+}
+```
+
+- 本地数据存储
+  - 总的来说，还是设置一个 `Expires` 头信息会更好些，而且其缓存内容能跨页面和跨会话（session）
+
+```javascript
+var localCache = {};
+function xhrRequest(url, callback){
+  // 检查此 URL 的本地缓存
+  if(localCache[url]){
+    callback.success(localCache[url]);
+    return;
+  }
+  // 此 URL 对应的缓存没找到，则发送请求
+  var req = createXhrObject();
+  req.onerror = function(){
+    callback.error();
+  }
+  req.onreadystatechange = function(){
+    if(req.readyState === 4){
+      if(req.responseText === '' || req.status === '404'){
+        callback.error();
+        return;
+      }
+      // 缓存响应文本到本地
+      localCache[url] = req.responseText;
+      callback.success(req.responseText);
+    }
+  };
+  req.open('GET', url, true);
+  req.send(null);
+}
+// 删除缓存
+delete localCache('/user/friendList/');
+delete localCache('/user/contactList/');
 ```
