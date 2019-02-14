@@ -523,3 +523,68 @@ function xhrRequest(url, callback){
 delete localCache('/user/friendList/');
 delete localCache('/user/contactList/');
 ```
+
+第八章、编程实践
+---
+
+Programming Practices
+
+- 延迟加载（Lazy Loading）
+  - 目的：消除函数中的重复工作
+
+```javascript
+function addHandler(target, eventType, handler){
+  // DOM2 Events
+  if(target.addEventListener){
+    addHandler = function(target, eventType, handler){
+      target.addEventListener(eventType, handle, false);
+    };
+  } else {
+    // IE
+    addHandler = function(target, eventType, handler){
+      target.attachEvent("on" + eventType, handler);
+    };
+  }
+  // 调用新函数
+  addHandler(target, eventType, handler);
+}
+function removeHandler(){
+  // DOM2 Events
+  if(target.removeEventLister){
+    removeHandler = function(target, eventType, handler){
+      target.removeEventListener(eventType, handle, false);
+    };
+  } else {
+    // IE
+    removeHandler = function(target, eventType, handler){
+      target.detachEvent("on" + eventType, handler);
+    };
+  }
+  // 调用新函数
+  removeHandler(target, eventType, handler);
+}
+```
+
+- 条件预加载（Conditional Advance Loading）
+  - 它会在脚本加载期间检测，不会等到函数被调用
+  - 预加载适用于一个函数马上就要用到，并且在整个页面的生命周期中频繁用到的场合
+
+```javascript
+var addHandler = document.body.addEventListener ?
+                 function(target, eventType, handler){
+                   target.addEventListener(eventType, handler, false);
+                 }:
+                 function(target, eventType, handler){
+                   target.attachEvent("on" + eventType, handler);
+                 };
+var removeHandler = document.body.removeEventListener ?
+                    function(target, eventType, handler){
+                      target.removeEventListener(eventType, handler, false);
+                    }:
+                    function(target, eventType, handler){
+                      target.detachEvent("on" + eventType, handler);
+                    };
+}
+```
+
+- JavaScript代码如何优化，都永远没有 `JavaScript 引擎`提供的原生方法更快，因为 JavaScript 的原生部分已经存在于浏览器中，并且都是用底层语言写的，诸如`C++`。这意味着这些方法会被编译成机器码，成为浏览器的一部分，所以不会像我们写的 JavaScript 代码那样受到各种限制。
