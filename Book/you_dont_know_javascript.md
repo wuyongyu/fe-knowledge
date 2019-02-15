@@ -52,10 +52,17 @@ Lexical Scope
 第三章、函数作用域和块作用域
 ---
 
+Function vs Block Scope
+
+- IIFE（Immediately Invoked Function Expression，立即被调用的函数表达式）
+  - `(function(){ .. })()`和`(function(){ .. }())`在功能上是一样的，取决于自己的偏好的风格选择
+- 从 ES3 开始，`try/catch` 结构在 `catch`子句上拥有块作用域
+
 第四章、提升
 ---
 
 第五章、作用域闭包
+---
 
 > 第二部分 this和对象原型
 
