@@ -61,6 +61,31 @@ Function vs Block Scope
 第四章、提升
 ---
 
+Hosting
+
+```js
+foo(); // typeError
+bar(); // ReferenceError
+
+var foo = function bar() {
+  // ...
+}
+```
+
+- 使用提升，可以解释为：
+
+```js
+var foo;
+
+foo(); // TypeError
+bar(); // ReferenceError
+
+foo = function() {
+  var bar = ...self...
+  // ...
+}
+```
+
 第五章、作用域闭包
 ---
 
