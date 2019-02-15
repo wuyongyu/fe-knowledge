@@ -36,3 +36,7 @@ Mac快捷键
 - Ctrl + Shift + g  // 显示Git面板
 - Command + Shift + x  // 显示插件面板
 - Ctrl + `  // 显示终端
+
+> 命令行启动
+
+- Command + P 然后输入 `> shell command: Install ‘code' command in PATH`
