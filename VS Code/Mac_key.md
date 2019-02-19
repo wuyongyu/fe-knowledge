@@ -40,3 +40,8 @@ Mac快捷键
 > 命令行启动
 
 - Command + P 然后输入 `> shell command: Install ‘code' command in PATH`
+
+> 光标
+
+- Ctrl + -  // 光标回到上一个位置
+- Ctrl + Shift + -  // 光标回到下一个位置
