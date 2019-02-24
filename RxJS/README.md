@@ -278,4 +278,34 @@ subject.subscribe({
 
 subject.next(5);
 subject.complete();
+
+// Operators
+function multiplyByTen(input){
+  let output = Rx.Observable.create(function subscribe(observer){
+    input.subscribe({
+      next: (x) => observer.next(10 * x),
+      error: (err) => observer.error(err),
+      complete: () => observer.complete()
+    });
+  });
+  return output;
+}
+
+let input = Rx.Observable.from([1,2,3,4]);
+let output = multiplyByTen(input);
+output.subscribe(x => console.log(x));
+
+// Instance operators
+Rx.Observable.prototype.multiplyByTen = function multiplyByTen(){
+  let input = this;  // this => ArrayObservable
+  return Rx.Observable.create(function subscribe(observer){
+    input.subscribe({
+      next: (x) => observer.next(10 * x),
+      error: (err) => observer.error(err),
+      complete: () => observer.complete()
+    });
+  });
+}
+let observable = Rx.Observable.from([1,2,3,4]).multiplyByTen();
+observable.subscribe(x => console.log(x));
 ```
