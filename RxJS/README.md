@@ -136,4 +136,146 @@ subject.subscribe({
   next: (x) => console.log('observerB: ' + x)
 });
 subject.next(18);
+
+// We can convert a unicast Observable execution to multicast, through the Subject
+let subject = new Rx.Subject();
+subject.subscribe({
+  next: (x) => console.log('observerA: ' + x)
+});
+subject.subscribe({
+  next: (x) => console.log('observerB: ' + x)
+});
+var observable = Rx.Observable.from([1,2,3]);
+observable.subscribe(subject);
+
+// Multicasted Observables
+let source = Rx.Observable.from([1, 2, 3]);
+let subject = new Rx.Subject();
+let multicasted = source.multicast(subject);
+multicasted.subscribe({
+  next: x => console.log('observerA: ' + x)
+});
+multicasted.subscribe({
+  next: x => console.log('observerB: ' + x)
+});
+multicasted.connect();
+
+// Reference counting
+let source = Rx.Observable.interval(500);
+let subject = new Rx.Subject();
+let multicasted = source.multicast(subject);
+let subscription1, subscription2, subscriptionConnect;
+
+subscription1 = multicasted.subscribe({
+  next: (x) => console.log('observerA: ' + x)
+})
+
+subscriptionConnect = multicasted.connect();
+
+setTimeout(() => {
+  subscription2 = multicasted.subscribe({
+    next: (x) => console.log('observerB: ' + x)
+  });
+}, 600);
+
+setTimeout(() => {
+  subscription1.unsubscribe();
+}, 1200);
+
+// refCount
+let source = Rx.Observable.interval(500);
+let subject = new Rx.Subject();
+let refCounted = source.multicast(subject).refCount();
+let subscription1, subscription2, subscriptionConnect;
+
+console.log('observerA subscribed');
+subscription1 = refCounted.subscribe({
+  next: (x) => console.log('observerA: ' + x)
+});
+
+setTimeout(() => {
+  console.log('observerB subscribed');
+  subscription2 = refCounted.subscribe({
+    next: (x) => console.log('observerB: ' + x)
+  })
+}, 600);
+
+setTimeout(() => {
+  console.log('observerA unsubscribed');
+  subscription1.unsubscribe();
+}, 1200);
+
+setTimeout(() => {
+  console.log('observerB unsubscribed');
+  subscription2.unsubscribe();
+}, 2000);
+
+// BehaviorSubject
+let subject = new Rx.BehaviorSubject(0);
+subject.subscribe({
+  next: (x) => console.log('observerA: ' + x)
+});
+subject.next(1);
+subject.next(2);
+subject.subscribe({
+  next: (x) => console.log('observerB: ' + x)
+});
+
+subject.next(3);
+
+// ReplaySubject
+let subject = new Rx.ReplaySubject(3);
+
+subject.subscribe({
+  next: (x) => console.log('observerA: ' + x)
+});
+
+subject.next(1);
+subject.next(2);
+subject.next(3);
+subject.next(4);
+
+subject.subscribe({
+  next: (x) => console.log('observerB: ' + x)
+})
+
+subject.next(5)
+
+// we can specify a window time in milliseconds, besides of the buffer sizer, to determine how old the record values can be.
+let subject = new Rx.ReplaySubject(100, 500);
+
+subject.subscribe({
+  next: (x) => console.log('observerA: ' + x)
+});
+
+let i = 1;
+let clearData = setInterval(() => subject.next(i++), 200);
+
+setTimeout(() => {
+  subject.subscribe({
+    next: (x) => console.log('observerB: ' + x)
+  })
+}, 1000);
+
+setTimeout(() => {
+  clearInterval(clearData);
+}, 3000);
+
+// AsyncSubject
+let subject = new Rx.AsyncSubject();
+subject.subscribe({
+  next: (x) => console.log('observerA: ' + x)
+});
+
+subject.next(1);
+subject.next(2);
+subject.next(3);
+subject.next(4);
+
+subject.subscribe({
+  next: (x) => console.log('observerB: ' + x)
+});
+
+subject.next(5);
+subject.complete();
 ```
