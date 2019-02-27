@@ -308,4 +308,59 @@ Rx.Observable.prototype.multiplyByTen = function multiplyByTen(){
 }
 let observable = Rx.Observable.from([1,2,3,4]).multiplyByTen();
 observable.subscribe(x => console.log(x));
+
+// Static operators
+let observable1 = Rx.Observable.interval(1000);
+let observable2 = Rx.Observable.interval(1000);
+let merge = Rx.Observable.merge(observable1, observable2);
+
+// Scheduler
+let observable = Rx.Observable.create(function (observer){
+  observer.next(1);
+  observer.next(2);
+  observer.next(3);
+  observer.complete();
+})
+.observeOn(Rx.Scheduler.async);
+console.log('just before subscribe');
+observable.subscribe({
+  next: x => console.log('get value: ' + x),
+  error: err => console.error('something wrong occurred: ' + err),
+  complete: () => console.log('done'),
+})
+console.log('just after subscribe');
+
+
+// More Readability
+let observable = Rx.Observable.create(function (proxyObserver){
+  proxyObserver.next(1);
+  proxyObserver.next(2);
+  proxyObserver.next(3);
+  proxyObserver.complete();
+})
+.observeOn(Rx.Scheduler.async);
+
+let finalObserver = {
+  next: x => console.log('get value: ' + x),
+  error: err => console.error('something wrong occurred: ' + err),
+  complete: () => console.log('done')
+};
+
+console.log('just before subscribe');
+observable.subscribe(finalObserver);
+console.log('just after subscribe');
+
+// proxyObserver
+var proxyObserver = {
+  next: (value) => {
+    Rx.Scheduler.async.scheduled(
+      (x) => finalObserver.next(x),
+      0,  // 延迟时间
+      value  // 会作用于上面函数的参数 x
+    )
+  }
+  // ...
+}
+
+// setTimeout(fn, 0) 会在下一个事件循环的最开始运行 fn
 ```
