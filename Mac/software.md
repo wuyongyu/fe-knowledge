@@ -25,15 +25,15 @@ Mac软件
 - JustFocus
 - MySQLWorkbench
 - Logitech Options
-- Sequel Pro
-- ShadowsocksX-NG-R8
-- Wireshark
-- Snappy
-- PxCook
-- Adobe Photoshop CC 2019
-- Adobe Illustrator CC 2019
-- Sketch
-- Trello
-- Postman
-- BrowserStack Local
-- [wordClock](https://www.simonheys.com/wordclock/)
+- [工具-MySQL管理] [Sequel Pro](https://www.sequelpro.com/)
+- [工具-Socks5代理] [ShadowSocksX-NG-R8](https://github.com/qinyuhang/ShadowsocksX-NG-R/releases)
+- [工具-悬浮截屏] [Snappy](https://itunes.apple.com/cn/app/snappyapp/id512617038?mt=12)
+- [工具-切图设计] [PxCook](https://www.fancynode.com.cn/pxcook)
+- [嗅探-网络封包分析] [WireShark](https://www.wireshark.org/)
+- [编辑器-处理位图图像-艺术家] [Adobe PhotoShop CC 2019](https://www.adobe.com/cn/products/photoshop.html)
+- [编辑器-处理矢量图形-设计师] [Adobe Illustrator CC 2019](https://www.adobe.com/cn/products/illustrator.html)
+- [编辑器-处理矢量图形] [Sketch](https://www.sketch.com/)
+- [工具-项目管理列表] [Trello](https://trello.com/)
+- [工具-测试API] [Postman](https://www.getpostman.com/)
+- [工具-测试浏览器兼容性] [BrowserStack Local](https://www.browserstack.com/)
+- [屏保-时钟屏幕保护] [wordClock](https://www.simonheys.com/wordclock/)
