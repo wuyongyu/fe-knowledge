@@ -28,6 +28,9 @@
 - Space  // 快速查看选中的文件，也就是预览功能
 - Command + Option + V  // 相当于Windows里面的文件剪切
 - Command + Delete  // 将文件移至废纸篓
+- Command + Shift + A // 定位到应用程序
+- Command + Shift + D // 定位到桌面
+- Command + Shift + O // 定位到文稿
 
 > 切换
 
