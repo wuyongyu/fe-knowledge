@@ -26,6 +26,7 @@ Mac软件
 - [工具-测试API] [Postman](https://www.getpostman.com/)
 - [工具-测试浏览器兼容性] [BrowserStack Local](https://www.browserstack.com/)
 - [工具-增强罗技鼠标] [LoGiTech Options](https://support.logitech.com.cn/zh_cn/software/options)
+- [工具-截取与分析网络请求] [Charles](https://www.charlesproxy.com/)
 - [屏保-时钟屏幕保护] [wordClock](https://www.simonheys.com/wordclock/)
 - [屏保-视频屏幕保护] [SaveHollywood](http://s.sudre.free.fr/Software/SaveHollywood/about.html)
 - [嗅探-网络封包分析] [WireShark](https://www.wireshark.org/)
