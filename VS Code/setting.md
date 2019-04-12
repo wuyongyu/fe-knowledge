@@ -11,6 +11,8 @@
     "git.autofetch": true,
     "editor.tabSize": 2,
     "editor.renderControlCharacters": true,
-    "editor.renderWhitespace": "all"
+    "editor.renderWhitespace": "all",
+    "breadcrumbs.enabled": true,
+    "search.followSymlinks": false,
 }
 ```
