@@ -1,6 +1,7 @@
 Mac软件
 ===
 
+<<<<<<< HEAD
 - 微信
 - 百度网盘
 - 迅雷
@@ -38,3 +39,43 @@ Mac软件
 - BrowserStack Local
 - KeyCastr
 - KeyKey
+=======
+- [工具-即时通讯] [微信](https://weixin.qq.com/)
+- [工具-云存储] [百度网盘](https://pan.baidu.com/)
+- [工具-点对点技术文件分享][迅雷](https://www.xunlei.com/)
+- [工具-记事本] [EverNote](https://www.evernote.com/)
+- [工具-程序员专用的记事本] [Quiver](http://happenapps.com/)
+- [工具-Vim] [MacVim](https://macvim-dev.github.io/macvim/)
+- [工具-网页浏览器] [Google Chrome](https://www.google.com/chrome/)
+- [工具-Git客户端管理] [SourceTree](https://www.sourcetreeapp.com/)
+- [工具-效率] [Alfred 3](https://www.alfredapp.com/)
+- [工具-API文档浏览器和代码片段管理] [Dash](https://kapeli.com/dash)
+- [工具-操作系统层虚拟化] [Docker](https://www.docker.com/)
+- [工具-hosts文件管理器] [Helm](https://itunes.apple.com/cn/app/helm-hosts-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/id1099472017?mt=12)
+- [工具-macOS终端模拟器] [iTerm 2](https://www.iterm2.com/)
+- [工具-番茄时钟] [TaDaMa](http://www.pc6.com/mac/606329.html)
+- [工具-定时休息] [JustFocus](http://climstudio.com/justfocus/)
+- [工具-数据库设计和建模] [MySQLWorkbench](https://www.mysql.com/cn/products/workbench/)
+- [工具-卸载专家] [AppCleaner](https://freemacsoft.net/appcleaner/)
+- [工具-MySQL管理] [Sequel Pro](https://www.sequelpro.com/)
+- [工具-Socks5代理] [ShadowSocksX-NG-R8](https://github.com/qinyuhang/ShadowsocksX-NG-R/releases)
+- [工具-悬浮截屏] [Snappy](https://itunes.apple.com/cn/app/snappyapp/id512617038?mt=12)
+- [工具-切图设计] [PxCook](https://www.fancynode.com.cn/pxcook)
+- [工具-项目管理列表] [Trello](https://trello.com/)
+- [工具-测试API] [Postman](https://www.getpostman.com/)
+- [工具-测试浏览器兼容性] [BrowserStack Local](https://www.browserstack.com/)
+- [工具-增强罗技鼠标] [LoGiTech Options](https://support.logitech.com.cn/zh_cn/software/options)
+- [工具-截取与分析网络请求] [Charles](https://www.charlesproxy.com/)
+- [屏保-时钟屏幕保护] [wordClock](https://www.simonheys.com/wordclock/)
+- [屏保-视频屏幕保护] [SaveHollywood](http://s.sudre.free.fr/Software/SaveHollywood/about.html)
+- [嗅探-网络封包分析] [WireShark](https://www.wireshark.org/)
+- [编辑器-文本] [Sublime Text](https://www.sublimetext.com/)
+- [编辑器-源代码和调试工具] [Visual Studio Code](https://code.visualstudio.com/)
+- [编辑器-JavaScript开发工具] [WebStorm](https://www.jetbrains.com/webstorm/)
+- [编辑器-PHP开发工具] [PhpStorm](https://www.jetbrains.com/phpstorm/)
+- [编辑器-文本集成开发环境] [Atom](https://atom.io/)
+- [宏编辑器-文本] [Emacs](https://www.gnu.org/software/emacs/)
+- [编辑器-处理位图图像-艺术家] [Adobe PhotoShop CC 2019](https://www.adobe.com/cn/products/photoshop.html)
+- [编辑器-处理矢量图形-设计师] [Adobe Illustrator CC 2019](https://www.adobe.com/cn/products/illustrator.html)
+- [编辑器-处理矢量图形] [Sketch](https://www.sketch.com/)
+>>>>>>> 700e827767e29c368344f2b6641dfcc00051f1bb
