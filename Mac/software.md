@@ -36,3 +36,5 @@ Mac软件
 - Trello
 - Postman
 - BrowserStack Local
+- KeyCastr
+- KeyKey
