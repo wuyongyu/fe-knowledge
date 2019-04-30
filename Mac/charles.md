@@ -8,4 +8,6 @@
 
 > 一开始代理不了，后来发现是VPN影响了。而且需要`系统偏好设置 -> 网络 -> 高级 -> 代理 -> 取消掉自动代理`
 
+- 查看 Mac 的IP地址：`ifconfig en0` [常用Mac端命令](https://www.jianshu.com/p/3291de46f3ff)
+
 - [Charles抓不到包](https://www.cnblogs.com/season-huang/p/6269841.html)
