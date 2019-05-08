@@ -15,6 +15,7 @@
 - Command + option + " `+` " 可以进行屏幕放大和缩小 【等价于 Control + "`鼠标滚轮`"】 // 设置路径， 系统偏好设置 -> 辅助功能 -> 缩放 -> `勾选`使用键盘快捷键进行缩放
 - Command + Shift + .  // 可以显示隐藏文件、文件夹，再按一次，恢复隐藏
 - Command + Space  // 切换输入法
+- Command + T  // 打开最近的文件夹，新建标签页【挺常用的】
 
 > 截图
 
@@ -49,7 +50,8 @@
 
 > 文本处理
 
-- Fn + Delete // 向后删除
+- Delete // 删除 【可以使用 Control + H】
+- Fn + Delete // 向后删除 【可以使用 Control + D】
 - Option + 左右方向键  // 将光标移至上/下一个单词的开头/末尾
 - Control + A  // 光标移至行或者段落的开头
 - Control + Command + 空格键  // 插入表情
