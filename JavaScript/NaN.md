@@ -18,3 +18,7 @@ function isReallyNaN(x){
   return x !== x;
 }
 ```
+
+---
+
+- `NaN`其实是属于 `Number` 类型，`Object.prototype.toString.call(NaN)` 返回的是 "[object Number]"
