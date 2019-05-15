@@ -16,4 +16,6 @@
 
 > 参考链接
 
+- Fn + F1 可以让电脑进入睡眠状态
+
 - [Microsoft Windows7 快捷键](https://support.microsoft.com/zh-cn/help/12445/windows-keyboard-shortcuts)
