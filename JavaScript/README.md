@@ -18,3 +18,7 @@ JavaScript知识拓展
   - 需要`if`这样的条件判断来作出决策
   - 需要循环来重复任务，直到不满足某个条件
   - 需要`函数`将代码组织为逻辑上可复用的块
+
+---
+
+- [Fisher–Yates Shuffle](https://bost.ocks.org/mike/shuffle/)
