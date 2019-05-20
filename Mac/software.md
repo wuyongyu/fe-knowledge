@@ -6,6 +6,7 @@ Mac软件
 - [工具-点对点技术文件分享][迅雷](https://www.xunlei.com/)
 - [工具-记事本] [EverNote](https://www.evernote.com/)
 - [工具-程序员专用的记事本] [Quiver](http://happenapps.com/)
+- [工具-程序员代码记录] [SnippetsLab](http://www.renfei.org/snippets-lab/) 代码片段管理工具，轻量，可基于菜单栏操作，支持iCloud同步
 - [工具-Vim] [MacVim](https://macvim-dev.github.io/macvim/)
 - [工具-网页浏览器] [Google Chrome](https://www.google.com/chrome/)
 - [工具-Git客户端管理] [SourceTree](https://www.sourcetreeapp.com/)
@@ -19,6 +20,7 @@ Mac软件
 - [键盘打字练习工具] [KeyKey](https://xclient.info/s/keykey.html)
 - [工具-番茄时钟] [TaDaMa](http://www.pc6.com/mac/606329.html)
 - [工具-定时休息] [JustFocus](http://climstudio.com/justfocus/)
+- [工具-定时休息] [Recess](http://imacami.net/#rss)规范时间的软件
 - [工具-数据库设计和建模] [MySQLWorkbench](https://www.mysql.com/cn/products/workbench/)
 - [工具-卸载专家] [AppCleaner](https://freemacsoft.net/appcleaner/)
 - [工具-MySQL管理] [Sequel Pro](https://www.sequelpro.com/)
@@ -30,6 +32,7 @@ Mac软件
 - [工具-测试浏览器兼容性] [BrowserStack Local](https://www.browserstack.com/)
 - [工具-增强罗技鼠标] [LoGiTech Options](https://support.logitech.com.cn/zh_cn/software/options)
 - [工具-截取与分析网络请求] [Charles](https://www.charlesproxy.com/)
+- [工具-压缩或解压缩] [Keka](https://www.keka.io/en/) 压缩中文目录后，在windows下打开不会存在乱码等现象
 - [屏保-时钟屏幕保护] [wordClock](https://www.simonheys.com/wordclock/)
 - [屏保-视频屏幕保护] [SaveHollywood](http://s.sudre.free.fr/Software/SaveHollywood/about.html)
 - [嗅探-网络封包分析] [WireShark](https://www.wireshark.org/)
