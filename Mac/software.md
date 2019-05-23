@@ -25,7 +25,7 @@ Mac软件
 - [工具-卸载专家] [AppCleaner](https://freemacsoft.net/appcleaner/)
 - [工具-MySQL管理] [Sequel Pro](https://www.sequelpro.com/)
 - [工具-Socks5代理] [ShadowSocksX-NG-R8](https://github.com/qinyuhang/ShadowsocksX-NG-R/releases)
-- [工具-悬浮截屏] [Snappy](https://itunes.apple.com/cn/app/snappyapp/id512617038?mt=12)
+- [工具-悬浮截屏] [Snappy](https://itunes.apple.com/cn/app/snappyapp/id512617038?mt=12) 快捷键：Command + Shift + 2【切图】
 - [工具-切图设计] [PxCook](https://www.fancynode.com.cn/pxcook)
 - [工具-项目管理列表] [Trello](https://trello.com/)
 - [工具-测试API] [Postman](https://www.getpostman.com/)
@@ -33,6 +33,7 @@ Mac软件
 - [工具-增强罗技鼠标] [LoGiTech Options](https://support.logitech.com.cn/zh_cn/software/options)
 - [工具-截取与分析网络请求] [Charles](https://www.charlesproxy.com/)
 - [工具-压缩或解压缩] [Keka](https://www.keka.io/en/) 压缩中文目录后，在windows下打开不会存在乱码等现象
+- [工具-在屏幕显示按下的按键] [keycastr](https://github.com/keycastr/keycastr) 安装：`brew cask install keycastr` 快捷键：Control + Option + Command + K【打开或者隐藏】
 - [屏保-时钟屏幕保护] [wordClock](https://www.simonheys.com/wordclock/)
 - [屏保-视频屏幕保护] [SaveHollywood](http://s.sudre.free.fr/Software/SaveHollywood/about.html)
 - [嗅探-网络封包分析] [WireShark](https://www.wireshark.org/)
