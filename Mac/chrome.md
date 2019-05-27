@@ -37,3 +37,9 @@ Chrome
 - OneTab
 - crxMouse Chrome
 - Brogrammer Dev Tools Theme
+
+---
+
+- Vimium插件
+  - y键可以复制当前页面的链接
+  - p键可以粘贴之前复制的页面链接
