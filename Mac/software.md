@@ -25,7 +25,7 @@ Mac软件
 - [工具-卸载专家] [AppCleaner](https://freemacsoft.net/appcleaner/)
 - [工具-MySQL管理] [Sequel Pro](https://www.sequelpro.com/)
 - [工具-Socks5代理] [ShadowSocksX-NG-R8](https://github.com/qinyuhang/ShadowsocksX-NG-R/releases)
-- [工具-悬浮截屏] [Snappy](https://itunes.apple.com/cn/app/snappyapp/id512617038?mt=12) 快捷键：Command + Shift + 2【切图】
+- [工具-悬浮截屏] [Snappy](http://snappy-app.com/download) 快捷键：Command + Shift + 2【切图】
 - [工具-切图设计] [PxCook](https://www.fancynode.com.cn/pxcook)
 - [工具-项目管理列表] [Trello](https://trello.com/)
 - [工具-测试API] [Postman](https://www.getpostman.com/)
