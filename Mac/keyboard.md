@@ -9,7 +9,8 @@
 - Command + R  // 开机后立即按下，可打开OS X的恢复功能（Recovery）
 - Control + Shift + Power  // 关闭显示器
 - Command + Control + Q  // 锁屏快捷键 【会和QQ应用的快捷键冲突】
-- Command + Control + 电源按钮  // 关闭所有应用程序并重新启动
+- Command + Control + Power  // 关闭所有应用程序并重新启动
+- Command + Control + Opt + Power  // 关机
 - Command + Option + ESC  // 打开强制退出应用程序
 - Command + F1  // 可以切换为投屏和分屏  -- 酷炫
 - Command + option + " `+` " 可以进行屏幕放大和缩小 【等价于 Control + "`鼠标滚轮`"】 // 设置路径， 系统偏好设置 -> 辅助功能 -> 缩放 -> `勾选`使用键盘快捷键进行缩放
