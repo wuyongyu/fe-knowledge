@@ -1,12 +1,162 @@
-CSS知识拓展
+CSS
 ===
 
-- [CSS 语法参考](http://tympanus.net/codrops/css_reference/)
-- [CSS3 动画手册](http://isux.tencent.com/css3/index.html)
-- [腾讯 CSS3 动画制作工具](http://isux.tencent.com/css3/tools.html)
-- [CSS 小工具集合](http://linxz.github.io/tianyizone/)
-- [CSS3 移动大杂烩](http://www.note12.com/category/blog/2014-6-5/538fe0a9f786f1b7019a4dfb)
-- [CSS3 触摸库](http://bouncejs.com/)
-- [CSS3 按钮动画](http://fian.my.id/Waves/)
-- [animate.css](http://daneden.github.io/animate.css/)
-- [全局 CSS 的终结](http://www.alloyteam.com/2015/10/8536/)
+> 1、空格的格式
+
+```css
+/* not good */
+.element {
+    color :red! important;
+    background-color: rgba(0,0,0,.5);
+}
+
+/* good */
+.element {
+    color: red !important;
+    background-color: rgba(0, 0, 0, .5);
+}
+```
+
+---
+
+```css
+/* not good */
+.element ,
+.dialog{
+    ...
+}
+
+/* good */
+.element,
+.dialog {
+    ...
+}
+```
+
+---
+
+```css
+/* not good */
+.element{
+    ...
+}
+
+/* good */
+.element {
+    ...
+}
+```
+
+---
+
+```css
+/* not good */
+@if{
+    ...
+}@else{
+    ...
+}
+
+/* good */
+@if {
+    ...
+} @else {
+    ...
+}
+```
+
+> 2、换行的格式
+
+```css
+/* not good */
+.element
+{color: red; background-color: black;}
+
+/* good */
+.element {
+    color: red;
+    background-color: black;
+}
+
+/* not good */
+.element, .dialog {
+    ...
+}
+
+/* good */
+.element,
+.dialog {
+    ...
+}
+```
+
+> 3、注释的格式
+
+```css
+/* Modal header */
+.modal-header {
+    ...
+}
+
+/*
+ * Modal header
+ */
+.modal-header {
+    ...
+}
+
+.modal-header {
+    /* 50px */
+    width: 50px;
+
+    color: red; /* color red */
+}
+```
+
+> 4、命名的格式
+
+```css
+/* class */
+.element-content {
+    ...
+}
+
+/* id */
+#myDialog {
+    ...
+}
+
+/* 变量 */
+$colorBlack: #000;
+
+/* 函数 */
+@function pxToRem($px) {
+    ...
+}
+
+/* 混合 */
+@mixin centerBlock {
+    ...
+}
+
+/* placeholder */
+%myDialog {
+    ...
+}
+```
+
+5、颜色的格式
+
+```css
+/* not good */
+.element {
+    color: #ABCDEF;
+    background-color: #001122;
+}
+
+/* good */
+.element {
+    color: #abcdef;
+    background-color: #012;
+}
+```
