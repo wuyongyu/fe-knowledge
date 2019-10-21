@@ -10,6 +10,7 @@ Mac软件
 - [工具-Vim] [MacVim](https://macvim-dev.github.io/macvim/)
 - [工具-网页浏览器] [Google Chrome](https://www.google.com/chrome/)
 - [工具-Git客户端管理] [SourceTree](https://www.sourcetreeapp.com/)
+- [工具-Git界面] [GitUp](https://github.com/git-up/GitUp)
 - [工具-效率] [Paste](https://pasteapp.me/)
 - [工具-效率] [Alfred 3](https://www.alfredapp.com/)
 - [工具-API文档浏览器和代码片段管理] [Dash](https://kapeli.com/dash)
