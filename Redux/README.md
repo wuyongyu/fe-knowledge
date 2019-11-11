@@ -59,6 +59,7 @@ Redux
         }
       }
       ```
+
   - store
     - `action`作用于`store`
     - `reducer`根据`store`响应

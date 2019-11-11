@@ -29,6 +29,8 @@ const Counter = ({
 )
 
 const { createStore } = Redux;
+// var createStore = Redux.createStore;
+// import { createStore } from 'redux';
 const store = createStore(counter);
 
 const render = () => {
