@@ -14,7 +14,7 @@ if (DEBUG) {
 // }
 
 // 也可以使用，但代码运行在多种 JavaScript 环境中时（不仅仅是浏览器，还有服务器，如 node.js 等），因此全局对象并非总是 window
-if (window.DEBUGGER) {
+if (window.DEBUG) {
   // Todo
 }
 ```
