@@ -9,6 +9,7 @@
 
 ---
 
+1. 两数之和 => [Two Sum](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/1_two_sum.js)
 3. 无重复字符的最长子串 => [Longest Substring Without Repeating Characters](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/3_longest_substring_without_repeating_characters.js)
 4. 寻找两个正序数组的中位数 => [Median of Two Sorted Arrays](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/4_median_of_two_sorted_arrays.js)
 5. 最长回文子串 => [Longest Palindromic Substring](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/5_longest_palindromic_substring.js)
