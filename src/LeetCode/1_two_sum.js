@@ -47,7 +47,7 @@ var twoSum = function(nums, target) {
 var twoSum = function(nums, target) {
   for (var i = 0; i < nums.length; i++) {
     var check = target - nums[i]; // 求差值
-    var res1 = i, res2 = nums.indexOf(check, i + 1); //从 i+1 位开始寻找后边有没有适合的值
+    var res1 = i, res2 = nums.indexOf(check, i + 1); // 从 i+1 位开始寻找后边有没有适合的值
     if (res2 !== -1) {
       return [res1,res2]
     }
