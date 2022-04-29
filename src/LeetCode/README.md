@@ -9,15 +9,15 @@
 
 ---
 
-- 3. 无重复字符的最长子串 => Longest Substring Without Repeating Characters
-- 4. 寻找两个正序数组的中位数 => Median of Two Sorted Arrays
-- 5. 最长回文子串 => Longest Palindromic Substring
-- 7. 整数反转 => Reverse Integer
-- 11. 盛最多水的容器 =>  Container With Most Water
-- 14. 最长公共前缀 => Longest Common Prefix
-- 38. 外观数列 => Count and Say
-- 58. 最后一个单词的长度 => Length of Last Word
-- 125. 验证回文串 => Valid Palindrome
-- 205. 同构字符串 => Isomorphic Strings
-- 290. 单词规律 => Word Pattern
-- 344. 反转字符串 => Reverse String
+3. 无重复字符的最长子串 => [Longest Substring Without Repeating Characters](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/3_longest_substring_without_repeating_characters.js)
+4. 寻找两个正序数组的中位数 => [Median of Two Sorted Arrays](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/4_median_of_two_sorted_arrays.js)
+5. 最长回文子串 => [Longest Palindromic Substring](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/5_longest_palindromic_substring.js)
+7. 整数反转 => [Reverse Integer](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/7_reverse_integer.js)
+11. 盛最多水的容器 => [Container With Most Water](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/11_container_with_most_water.js)
+14. 最长公共前缀 => [Longest Common Prefix](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/14_longest_common_prefix.js)
+38. 外观数列 => [Count and Say](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/38_count_and_say.js)
+58. 最后一个单词的长度 => [Length of Last Word](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/58_length_of_last_word.js)
+125. 验证回文串 => [Valid Palindrome](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/125_valid_palindrome.js)
+205. 同构字符串 => [Isomorphic Strings](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/205_isomorphic_string.js)
+290. 单词规律 => [Word Pattern](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/290_word_pattern.js)
+344. 反转字符串 => [Reverse String](https://github.com/wuyongyu/fe-knowledge/blob/master/src/LeetCode/344_reverse_string.js)
