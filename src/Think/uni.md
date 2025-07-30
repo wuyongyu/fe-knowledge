@@ -6,4 +6,4 @@
 
 查阅资料：发现掘金的一篇文档（https://juejin.cn/post/7011480562070208519）说 uni.chooseImage 不能异步执行，于是尝试调整一下异步的位置，发现移动端能正常上传图片了
 
-解决总结：如果 uni.chooseImage 在异步函数中调用的话，会出现API不可用的情况，使用同步的方式调用 uni.chooseImage
+解决总结：如果 uni.chooseImage 在异步函数中调用的话，会出现API不可用的情况。应该使用同步的方式调用 uni.chooseImage
